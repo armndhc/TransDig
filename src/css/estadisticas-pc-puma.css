@@ -98,7 +98,7 @@
 }
 
 .gallery-caption-box {
-    background: linear-gradient(90deg, var(--unam-blue) 0%, #00c6fb 100%);
+    background: linear-gradient(90deg, var(--fi-azul) 0%, var(--fi-dorado) 100%);
     padding: 10px 0;
     width: 100%;
     text-align: center;

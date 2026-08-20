@@ -1,9 +1,4 @@
-:root {
-    --unam-blue: #064B7C;
-    --unam-gold: #46b064;
-    --light-gray: #ffffff;
-    --dark-gray: #000000;
-}
+/* Variables de color: ver :root en style.css (fuente unica) */
 
 .content {
     display: flex;

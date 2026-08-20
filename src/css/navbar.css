@@ -1,9 +1,4 @@
-:root {
-    --unam-blue: #064B7C;
-    --unam-gold: #46b064;
-    --light-gray: #ffffff;
-    --dark-gray: #000000;
-}
+
 
 * {
     margin: 0;
@@ -94,7 +89,7 @@
 }
 
 .nav-container.scrolled .nav-list a.active {
-    color: var(--unam-blue);
+    color: var(--fi-rojo);
 }
 
 /* Los links dentro de los dropdowns siempre son oscuros, ya que su fondo siempre es blanco */

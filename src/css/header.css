@@ -1,9 +1,4 @@
-:root {
-    --unam-blue: #064B7C;
-    --unam-gold: #46b064;
-    --light-gray: #ffffff;
-    --dark-gray: #000000;
-}
+/* Variables de color: ver :root en style.css (fuente unica) */
 
 * {
     margin: 0;
@@ -30,6 +25,13 @@
         .dropdown-content a {
             padding: 12px 20px;
             border-bottom: 1px solid #ffffff;
+            color: var(--dark-gray);
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: var(--fi-azul);
+            color: #ffffff;
         }
 
         .dropdown-content a:last-child {
@@ -49,7 +51,7 @@
 
 /* Top bar */
 .top-bar {
-    background-color: var(--unam-blue);
+    background-color: var(--fi-rojo);
     color: white;
     padding: 13px 0;
     font-size: 14px;

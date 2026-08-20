@@ -1,6 +1,6 @@
  /* Footer styles */
         footer {
-            background: linear-gradient(90deg, var(--unam-blue) 0%, var(--unam-gold) 100%);
+            background-color: var(--fi-grisOscuro);
             color: white;
             margin-top: 50px;
         }
@@ -73,7 +73,7 @@
         }
 
         .footer-contact h3 {
-            color: var(--unam-gold);
+            color: var(--fi-dorado);
             font-size: 16px;
             margin-bottom: 10px;
         }
@@ -88,7 +88,7 @@
         .contact-item svg {
             width: 16px;
             height: 16px;
-            color: var(--unam-gold);
+            color: var(--fi-dorado);
         }
 
         .contact-item a {
@@ -98,11 +98,11 @@
         }
 
         .contact-item a:hover {
-            color: var(--unam-gold);
+            color: var(--fi-dorado);
         }
 
         .footer-bottom {
-            border-top: 2px solid #d2d2d2;
+            border-top: 2px solid rgba(255, 255, 255, 0.15);
             padding-top: 20px;
             text-align: center;
         }

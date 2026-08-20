@@ -6,7 +6,7 @@ body {
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
     background: #fff; 
-    background: linear-gradient(#46b064, #064B7C)
+    background: linear-gradient(var(--fi-dorado), var(--fi-azul));
 }
 
 .content {
@@ -58,7 +58,7 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #064B7C;
+    background-color: var(--fi-azul);
     color: #fff;
     border: none;
     font-family: monospace;
@@ -129,7 +129,7 @@ body {
 }
 
 .card-list .card-item .card-link:hover{
-    border-color: #5372F0;
+    border-color: var(--fi-azul);
 }
 
 .card-list .card-link .card-image{
@@ -148,19 +148,19 @@ body {
 .card-list .card-link .card-button{
     height: 35px;
     width: 35px;
-    color: #5372F0;
+    color: var(--fi-azul);
     border-radius: 50%;
     margin: 30px 0 5px;
     background: none;
     cursor: pointer;
-    border: 2px solid #5372F0;
+    border: 2px solid var(--fi-azul);
     transform: rotate(0deg);
     transition: 0.3s ease;
 }
 
 .card-list .card-link:hover .card-button{
     color: #fff;
-    background: #5372F0;
+    background: var(--fi-azul);
     transform: rotate(-45deg);
 }
 
@@ -168,7 +168,7 @@ body {
     height: 13px;
     width: 13px;
     opacity: 0.5;
-    background: #5372F0;
+    background: var(--fi-azul);
 }
 
 .card-wrapper .swipper-pagination-bullets-acitve{
@@ -176,7 +176,7 @@ body {
 }
 
 .card-wrapper .swipper-slide-buttons{
-    color: #5372F0;
+    color: var(--fi-azul);
     margin: -10px;
 }
 

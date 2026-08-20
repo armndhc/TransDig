@@ -33,7 +33,7 @@ hr{
 
 .persona {
     background-color: #e8f4fd;
-    border: 2px solid #0A4359;
+    border: 2px solid var(--fi-azul);
     border-radius: 8px;
     padding: 15px;
     margin: 0 20px;
@@ -54,7 +54,7 @@ hr{
     margin: 0 0 10px 0;
     color: #2c3e50;
     font-size: 16px;
-    border-bottom: 2px solid #0A4359;
+    border-bottom: 2px solid var(--fi-azul);
     padding-bottom: 5px;
 }
 
@@ -66,12 +66,12 @@ hr{
 
 .departamento {
     font-weight: bold;
-    color: #e74c3c;
+    color: var(--fi-rojo);
 }
 
 .puesto {
     font-style: italic;
-    color: #27ae60;
+    color: var(--fi-azul);
 }
 
 .email, .telefono {
@@ -100,7 +100,7 @@ hr{
 
 .conector {
     position: absolute;
-    background-color: #3498db;
+    background-color: var(--fi-azul);
     z-index: 1;
 }
 .conector-vertical {

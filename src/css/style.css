@@ -1,6 +1,10 @@
-        :root {
-            --unam-blue: #064B7C;
-            --unam-gold: #46b064;
+:root {
+            /* Paleta oficial FI */
+            --fi-rojo: #cd171e;
+            --fi-azul: #003d79;
+            --fi-dorado: #eab15b;
+            --fi-grisOscuro: #343A40;
+
             --light-gray: #ffffff;
             --dark-gray: #000000;
         }
@@ -20,7 +24,7 @@
        
         /* Separador con gradiente */
         .separador.gradiente {
-            background: linear-gradient(90deg, var(--unam-blue) 0%, var(--unam-gold) 100%);
+            background: linear-gradient(90deg, var(--fi-rojo) 0%, var(--fi-dorado) 100%);
             padding: 10px 20px;
             border-radius: 4px;
             margin: 30px 0 20px;
@@ -79,7 +83,7 @@
             height: 40px;
             border-radius: 50%;
             background-color: rgba(255, 255, 255, 0.5);
-            color: var(--unam-blue);
+            color: var(--fi-rojo);
             border: none;
             font-size: 20px;
             font-weight: bold;
@@ -90,7 +94,7 @@
 
         .slider .buttons button:hover {
             background-color: white;
-            color: var(--unam-gold);
+            color: var(--fi-dorado);
         }
 
         .slider .dots {
@@ -114,7 +118,7 @@
         }
 
         .slider .dots li.active {
-            background-color: var(--unam-gold);
+            background-color: var(--fi-dorado);
             transform: scale(1.2);
         }
 
@@ -164,7 +168,7 @@
         .news-card h3 {
             margin: 0 0 8px;
             font-size: 1.1em;
-            color: var(--unam-blue);
+            color: var(--fi-rojo);
         }
         .news-card .date {
             font-size: 0.8em;
@@ -180,7 +184,7 @@
         .news-card a {
             display: inline-block;
             padding: 6px 12px;
-            background: var(--unam-gold);
+            background: var(--fi-dorado);
             color: white;
             text-decoration: none;
             border-radius: 3px;
@@ -188,7 +192,7 @@
             font-size: 0.9em;
         }
         .news-card a:hover {
-            background: var(--unam-blue);
+            background: var(--fi-rojo);
         }
         .carousel-controls {
             position: absolute;
@@ -202,7 +206,7 @@
             width: 40px;
             height: 40px;
             background: rgba(255, 255, 255, 0.5);
-            color: var(--unam-blue);
+            color: var(--fi-rojo);
             border: none;
             padding: 8px;
             cursor: pointer;
@@ -211,7 +215,7 @@
         }
         .carousel-controls button:hover {
             background-color: white;
-            color: var(--unam-gold);
+            color: var(--fi-dorado);
         }
         @media (max-width: 768px) {
             .carousel-item {
@@ -280,7 +284,7 @@
             position: absolute;
             bottom: 0;
             height: 3px;
-            background-color: var(--unam-gold);
+            background-color: var(--fi-dorado);
             transition: all 0.3s ease;
         }
             
@@ -331,7 +335,7 @@
 }
 
 .mission-text h3 {
-    color: var(--unam-blue);
+    color: var(--fi-rojo);
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 15px;
@@ -350,7 +354,7 @@
 }
 
 .mission-text li strong {
-    color: var(--unam-blue);
+    color: var(--fi-rojo);
 }
 
 .mission-image {

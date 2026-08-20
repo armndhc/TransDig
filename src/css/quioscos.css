@@ -672,7 +672,7 @@
         width: 25%;
         margin: 0 auto;
         padding: 30px;
-        background-color: #46b064;
+        background-color: var(--fi-dorado);
         color: #fff;
         text-align: center;
         text-decoration: none;
@@ -684,7 +684,7 @@
     }
 
     .btn:hover {
-        background-color: #064B7C;
+        background-color: var(--fi-azul);
     }
 
     .button-container {
@@ -704,7 +704,7 @@
 
 .espacios-quioscos h2 {
   text-align: center;
-  color: #064B7C;
+  color: var(--fi-azul);
   margin-bottom: 30px;
   font-size: 1.8rem;
 }
@@ -742,7 +742,7 @@
 .quiosco-card h3 {
   margin: 12px 0 6px;
   font-size: 1.2rem;
-  color: #064B7C;
+  color: var(--fi-azul);
 }
 
 .quiosco-card p {
@@ -754,7 +754,7 @@
 .separadorEspacios {
   border: none;
   height: 3px;
-  background-color: #064B7C;
+  background-color: var(--fi-azul);
   margin: 40px 0;
   border-radius: 2px;
 }

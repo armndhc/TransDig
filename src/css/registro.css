@@ -76,15 +76,15 @@ input:not([type="file"]) {
     font-size: small;
     border-width: 1px;
     /* border-radius: 5px; */
-    border-color: #193c6b;
+    border-color: var(--fi-azul);
 }
 
 select {
     border-radius: 6px;
-    background: #193c6b;
+    background: var(--fi-azul);
     color: #ffffff;
-    box-shadow: inset -22px -22px 15px #15325a,
-                inset 22px 22px 15px #1d467c;
+    box-shadow: inset -22px -22px 15px #00274d,
+                inset 22px 22px 15px #005298;
     font-size: 16px;
     padding: 10px;
     border: none;
@@ -123,10 +123,10 @@ select {
 Button {
     margin-top: 20px;
     border-radius: 6px;
-    background: #193c6b;
+    background: var(--fi-azul);
     color: #ffffff;
-    box-shadow: inset -22px -22px 15px #15325a,
-    inset 22px 22px 15px #1d467c;
+    box-shadow: inset -22px -22px 15px #00274d,
+    inset 22px 22px 15px #005298;
 }
 
 form div {
@@ -144,10 +144,10 @@ input[type="file"] {
     display: inline-block;
     padding: 10px 20px;
     border-radius: 6px;
-    background: #193c6b;
+    background: var(--fi-azul);
     color: #ffffff;
-    box-shadow: inset -22px -22px 15px #15325a, 
-                inset 22px 22px 15px #1d467c;
+    box-shadow: inset -22px -22px 15px #00274d, 
+                inset 22px 22px 15px #005298;
     font-size: 16px;
     cursor: pointer;
     border: none;
@@ -155,11 +155,11 @@ input[type="file"] {
 }
 
 .file-selected {
-    background: #1d467c; /* Cambia el color de fondo */
+    background: #005298; /* Cambia el color de fondo */
 }
 
 .custom-file-label:hover {
-    background: #1d467c;
+    background: #005298;
 }
 
 /* Para ocultar las flechas en la mayoría de los navegadores */

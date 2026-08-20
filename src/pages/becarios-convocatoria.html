@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="../css/convocatoria.css">
+    <link rel="stylesheet" href="../css/navbar.css"> 
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+<body>
+    <header-component></header-component>
+    <navbar-component></navbar-component>
+
+    <div class="content">
+        <div class="elementos">
+            <img src="../images/flyers/Convocatoria6.jpg" alt="Imagen Convocatoria">
+        </div>
+    </div>
+    
+    
+    <div class="separador gradiente">
+            <h2>Objetivo</h2>
+    </div>
+
+    <div class="mission-section">
+            <div class="mission-content">
+                <div class="mission-text">
+                    <ul>
+                        <li><strong>Impulsar el desarrollo de competencias profesionales y personales en los becarios mediante su participaci&oacute;n
+                             activa en proyectos institucionales administrativos y de docencia, con el fin de adquirir experiencia pr&aacute;ctica y 
+                             relevante en entornos de trabajo reales, al fortalecer sus habilidades en innovaci&oacute;n y tecnolog&iacute;as de la informaci&oacute;n 
+                             para complementar su formaci&oacute;n acad&eacute;mica e impulsar su crecimiento profesional.</li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+
+     <div class="separador gradiente">
+            <h2>Convocatorias anteriores</h2>
+    </div>
+
+    <div class="pinterest-gallery">
+        <div class="gallery-item">
+            <div class="gallery-caption-box">
+                <span class="gallery-caption">Primer convocatoria</span>
+            </div>
+            <img src="../images/flyers/convocatoria1.jpg" onclick="openModal(this)">
+        </div>
+        <div class="gallery-item">
+            <div class="gallery-caption-box">
+                <span class="gallery-caption">Segunda convocatoria</span>
+            </div>
+            <img src="../images/flyers/convocatoria2.jpg" onclick="openModal(this)">
+        </div>
+        <div class="gallery-item">
+            <div class="gallery-caption-box">
+                <span class="gallery-caption">Tercer convocatoria</span>
+            </div>
+            <img src="../images/flyers/convocatoria3.jpg" onclick="openModal(this)">
+        </div>
+        <div class="gallery-item">
+            <div class="gallery-caption-box">
+                <span class="gallery-caption">Cuarta convocatoria</span>
+            </div>
+            <img src="../images/flyers/convocatoria4.png" onclick="openModal(this)">
+        </div>
+        <div class="gallery-item">
+            <div class="gallery-caption-box">
+                <span class="gallery-caption">Quinta convocatoria</span>
+            </div>
+            <img src="../images/flyers/Convocatoria5.jpg" onclick="openModal(this)">
+        </div>
+        <!--
+        <div class="gallery-item">
+            <div class="gallery-caption-box">
+                <span class="gallery-caption">Sala de Reuniones</span>
+            </div>
+            <img src="/../images/pcpuma/4.jpg" alt="Sala de Reuniones" onclick="openModal(this)">
+        </div>
+        -->
+            <!-- Modal for enlarged image -->
+            <div id="imgModal" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
+                <img id="modalImg" style="max-width:90vw; max-height:80vh; display:block; margin:auto;">
+                <div id="modalCaption" style="color:white;text-align:center;margin-top:10px;"></div>
+            </div>
+            <script>
+            function openModal(img) {
+                var modal = document.getElementById('imgModal');
+                var modalImg = document.getElementById('modalImg');
+                var caption = document.getElementById('modalCaption');
+                modal.style.display = 'flex';
+                modalImg.src = img.src;
+                caption.textContent = img.alt;
+            }
+            function closeModal() {
+                document.getElementById('imgModal').style.display = 'none';
+            }
+
+            // Cerrar modal al hacer clic fuera de la imagen
+            document.addEventListener('DOMContentLoaded', function() {
+                var modal = document.getElementById('imgModal');
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        closeModal();
+                    }
+                });
+            });
+            </script>
+        </div>
+
+    <footer-component></footer-component>
+    <script src="../script/components/header.js"></script>
+    <script src="../script/components/navbar.js"></script>
+    <script src="../script/components/footer.js"></script>
+    
+</body>
+</html>

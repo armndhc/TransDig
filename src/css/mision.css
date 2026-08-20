@@ -1,0 +1,37 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+    padding: 3vw;
+}
+
+.cards-content{
+    display: grid;
+    max-width: 80vw;
+    gap: 30px; /* Espaciado opcional entre los elementos */
+    text-align: center;
+}
+
+.card {
+    background-color: #e8f4fd;
+    border-radius: 8px;
+    padding: 15px;
+    margin:0 20px;
+    height: auto;
+    width: auto;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    z-index: 2;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow:  21px 21px 24px #919191,
+                -21px -21px 24px #ffffff;
+}
+
+@media (max-width: 820px) {
+    .cards-content {
+        grid-template-rows: repeat(4, 1fr); /* 4 columnas de igual ancho */
+        grid-template-columns: auto; /* Filas con altura automática */
+    }
+}

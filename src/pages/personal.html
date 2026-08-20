@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Quioscos PC PUMA</title>
+    <link rel="stylesheet" href="../css/quioscos.css">
+    <link rel="stylesheet" href="../css/navbar.css"> 
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+<body>
+    <!--Escudos /script/components/header-->
+    <header-component></header-component> 
+    <!--Barra de Navegación /script/components/navbar-->
+    <navbar-component></navbar-component>
+
+    <div class="content">
+       <div class="separador gradiente">
+			<h2>¿Quiénes somos?</h2>
+        </div>
+	
+    <section class="quioscos-content">
+        <h2>Integrantes de Quioscos PC Puma</h2>
+        <p>Somos un equipo de colaboradores integrado por:</p>
+            <ul class="team-list">
+                <li>Personal académico</li>
+                <li>Ayudantes de profesor</li>
+                <li>Becarios</li>
+                <li>Servicios Sociales</li>
+                <li>Personal administrativo</li>
+                <li>Personal de apoyo</li>
+            </ul>
+
+        </section>
+        
+    <!-- Descripción de los quioscos -->
+    <section class="quioscos-content">
+        <p>
+            En <strong>Quioscos PC Puma</strong> nos encargamos de planificar, implementar, administrar y dar soporte a la infraestructura tecnológica 
+            y los sistemas de información. Estas actividades son fundamentales para garantizar que la tecnología apoye de manera eficiente 
+            los objetivos estratégicos de enseñanza-aprendizaje.
+        </p>
+        <p>
+            Los <strong>Quioscos PC Puma</strong> son espacios equipados con PCs y laptops con acceso inalámbrico de alta velocidad, 
+            diseñados para actividades académicas, investigación y colaboración en un entorno digital integrado.
+        </p>
+        <p>
+            Gracias a esta inversión, se habilitaron <strong>dos quioscos principales</strong> en los edificios norte y sur de la Facultad, 
+            con capacidad para atender simultáneamente a <strong>más de 200 usuarios</strong>.
+        </p>
+        <div class="highlight-box">
+            <h3>Objetivo principal</h3>
+            <p>
+                Reducir la brecha tecnológica, fomentar una cultura de aprendizaje apoyada en TICs y proporcionar 
+                un entorno donde estudiantes y profesores puedan conectarse, colaborar y desarrollar proyectos 
+                con los recursos que demandan los retos de la ingeniería contemporánea.
+            </p>
+        </div>
+        <blockquote class="summary">
+            <p>
+                <strong>En resumen:</strong><br>
+                Los centros de TI de los Quioscos PC Puma son una pieza clave para potenciar la transformación digital 
+                de la universidad y crear espacios de aprendizaje más flexibles y conectados.
+                </p>
+        </blockquote>
+    </section>
+	
+    <!-- Galería de imágenes -->
+      <section class="gallery-section">
+            <div class="swiper gallery-carousel">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../images/quioscos/Quiosco10.jpg" alt="Quiosco principal norte" loading="lazy">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/quioscos/Quiosco02.jpeg" alt="Área de colaboración" loading="lazy">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/quioscos/Quiosco05.jpg" alt="Quiosco sur iluminado" loading="lazy">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/quioscos/Quiosco04.jpg" alt="Zona de laptops" loading="lazy">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/quioscos/carrusel5.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/quioscos/carrusel6.jpeg" alt="" loading="lazy">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/quioscos/carrusel7.jpeg" alt="" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Paginación (puntos) -->
+                <div class="swiper-pagination"></div>
+
+                <!-- Botones de navegación -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+</div>
+    <!--Escudos /script/components/footer-->
+    <footer-component></footer-component>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../script/components/header.js"></script>
+    <script src="../script/components/navbar.js"></script>
+    <script src="../script/components/footer.js"></script>
+    <script src="../script/index-script.js"></script>
+    
+    <script>
+        // Inicializar el carrusel con autoplay y estilo UNAM
+        const gallerySwiper = new Swiper('.gallery-carousel', {
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            speed: 800,
+            grabCursor: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            slidesPerView: 1,
+            spaceBetween: 0,
+        });
+    </script>
+</body>
+</html>

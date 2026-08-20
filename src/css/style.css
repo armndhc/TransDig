@@ -1,0 +1,397 @@
+        :root {
+            --unam-blue: #064B7C;
+            --unam-gold: #46b064;
+            --light-gray: #ffffff;
+            --dark-gray: #000000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+        }
+
+
+       
+        /* Separador con gradiente */
+        .separador.gradiente {
+            background: linear-gradient(90deg, var(--unam-blue) 0%, var(--unam-gold) 100%);
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin: 30px 0 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .separador.gradiente h2 {
+            color: white;
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* Slider de avisos */
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .slider .list {
+            position: absolute;
+            width: 1000%;
+            height: 100%;
+            left: 0;
+            transition: 0.5s;
+        }
+
+        .slider .list .item {
+            position: relative;
+            width: 10%;
+            height: 100%;
+            float: left;
+        }
+
+        .slider .list .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: auto;
+        }
+
+        .slider .buttons {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .slider .buttons button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            color: var(--unam-blue);
+            border: none;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 0 15px;
+            transition: all 0.3s;
+        }
+
+        .slider .buttons button:hover {
+            background-color: white;
+            color: var(--unam-gold);
+        }
+
+        .slider .dots {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .slider .dots li {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .slider .dots li.active {
+            background-color: var(--unam-gold);
+            transform: scale(1.2);
+        }
+
+        /* Contenedor de noticias */
+
+        .carousel-container {
+            max-width: 1200px;
+            margin: 15px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-item {
+            flex: 0 0 33.33%;
+            padding: 8px;
+            box-sizing: border-box;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .carousel-item.active {
+            opacity: 1;
+        }
+        .news-card {
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: left;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .news-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .news-card-content {
+            padding: 10px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .news-card h3 {
+            margin: 0 0 8px;
+            font-size: 1.1em;
+            color: var(--unam-blue);
+        }
+        .news-card .date {
+            font-size: 0.8em;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        .news-card p {
+            font-size: 0.9em;
+            color: #333;
+            margin: 0 0 10px;
+            flex-grow: 1;
+        }
+        .news-card a {
+            display: inline-block;
+            padding: 6px 12px;
+            background: var(--unam-gold);
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+            align-self: flex-start;
+            font-size: 0.9em;
+        }
+        .news-card a:hover {
+            background: var(--unam-blue);
+        }
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-controls button {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.5);
+            color: var(--unam-blue);
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 50%;
+        }
+        .carousel-controls button:hover {
+            background-color: white;
+            color: var(--unam-gold);
+        }
+        @media (max-width: 768px) {
+            .carousel-item {
+                flex: 0 0 100%;
+            }
+            .news-card img {
+                height: 120px;
+            }
+        }
+
+      
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .site-title h1 {
+                font-size: 18px;
+            }
+
+            .site-title p {
+                font-size: 12px;
+            }
+
+            .logo-unam, .logo-fi {
+                height: 50px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-info span {
+                display: none;
+            }
+            
+            .nav-container {
+                background-color: white;
+                border-top: 1px solid #eee;
+                position: sticky; /* Hace que se quede fijo al scrollear */
+                top: 0; /* Se fija en la parte superior */
+                z-index: 1000; /* Asegura que esté por encima de otros elementos */
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-list {
+                display: flex;
+                list-style: none;
+                justify-content: center;
+            }
+            
+            .nav-list.active {
+                display: flex;
+            }
+            
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                margin-left: 20px;
+                width: auto;
+            }
+            
+            .site-title {
+                display: none;
+            }
+
+            .underline {
+            position: absolute;
+            bottom: 0;
+            height: 3px;
+            background-color: var(--unam-gold);
+            transition: all 0.3s ease;
+        }
+            
+            
+        }
+
+        @media (max-width: 576px) {
+            .top-bar-container {
+                max-width: none; /* Remove max-width */
+                margin: 0; /* Remove centering */
+                padding: 0 20px; /* Keep padding for breathing room */
+            }
+            
+            .logo-container {
+                justify-content: center;
+            }
+            
+            .header-container {
+                max-width: none;
+                margin: 0;
+                padding: 15px 20px;
+            }
+            
+            .logo-unam, .logo-fi {
+                height: 40px;
+            }
+        }
+
+/* Mission Section */
+.mission-section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.mission-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mission-text {
+    flex: 2;
+}
+
+.mission-text h3 {
+    color: var(--unam-blue);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.mission-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mission-text li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--dark-gray);
+    margin-bottom: 10px;
+}
+
+.mission-text li strong {
+    color: var(--unam-blue);
+}
+
+.mission-image {
+    flex: 1;
+    text-align: center;
+}
+
+.mission-image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: contain;
+}
+
+/* Responsive styles for mission section */
+@media (max-width: 768px) {
+    .mission-content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .mission-text {
+        text-align: center;
+    }
+
+    .mission-image {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .mission-text h3 {
+        font-size: 20px;
+    }
+
+    .mission-text li {
+        font-size: 14px;
+    }
+
+    .mission-image img {
+        max-height: 120px;
+    }
+
+}

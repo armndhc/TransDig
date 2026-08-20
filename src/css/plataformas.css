@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+.plataforms_title {
+    font-family:Audiowide;
+    color:darkblue;
+    padding-bottom:5px;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.platforms_container{
+    background: white;
+}
+
+#cuerpo{
+    padding: 50px 50px 30px 30px;
+    
+}
+
+.platforms_h3{
+    font-size: 27px;
+    margin-bottom: -10px;
+    margin-top: 40px;
+}
+
+.text-info{
+    color: rgb(20, 164, 164);
+}
+
+a{
+    text-decoration: none;
+}
+
+.link-educafi{
+    font-size: 20px;
+}
+
+.platforms_p{
+    font-size: 17px;
+}
+
+.platforms_li{
+    padding: 5px 10px;
+}
+
+.btn {
+    display: block;
+    width: 25%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #46b064;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 20px;
+}
+
+.btn:hover {
+    background-color: #064B7C;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; 
+    flex-direction: row; 
+    gap: 35px; 
+    padding: 20px;
+    max-width: 100%; 
+    box-sizing: border-box;
+}
+
+.educafi-button {
+    text-align: center;
+    flex: 0 0 auto; 
+}
+
+.educafi-button img {
+    width: 400px; 
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+    transition: transform 0.3s ease;
+}
+
+.educafi-button img:hover {
+    transform: scale(1.15); 
+}
+
+.educafi-button a {
+    text-decoration: none;
+}
+
+.button-label {
+    display: block; /* Asegura que la etiqueta esté en una nueva línea */
+    font-weight: 700; /* Fuente más negrita */
+    margin-top: 10px; /* Separación de la imagen */
+    font-size: 16px; /* Tamaño de fuente legible */
+    color: #333; /* Color del texto, ajustable */
+}
+
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 800px) {
+    .educafi-button img {
+        width: 120px; /* Reduce el tamaño de las imágenes en pantallas pequeñas */
+    }
+    .button-container {
+        gap: 15px; /* Reduce el espacio entre botones */
+    }
+} 
+

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/registro.css">
+</head>
+<body>
+    <!--Escudos /script/components/header-->
+    <!-- <header-component></header-component> -->
+    <!--Barra de Navegación /script/components/navbar-->
+    <navbar-component></navbar-component>
+
+    <div class="content">
+
+        <form class="registro">
+            <h1>Formulario de Registro</h1>
+            
+            <div class="elementos">
+                
+                <div class="nombres">
+                    <div>
+                        <Label for="nombre">Nombre</Label>
+                        <input id="nombre" placeholder="Nombre" required/>
+                    </div>
+                    <div>
+                        <Label for="apellido-paterno">Apellido Paterno</Label>
+                        <input id="apellido-paterno" placeholder="Apellido Paterno" required/>
+                    </div>
+                    <div>
+                        <Label for="apellido-materno">Apellido Materno</Label>
+                        <input id="apellido-materno" placeholder="Apellido Materno" />
+                    </div>
+                </div>
+            
+                <div class="masdatos">
+                    <div>
+                        <Label for="rfc">RFC</Label>
+                        <input id="rfc" placeholder="RFC" maxlength="13" pattern="\w{13}" required/>
+                    </div>
+    
+                    <div>
+                        <Label for="correo">Correo Electrónico</Label>
+                        <input id="correo" type="email" placeholder="Correo Electrónico" required/>
+                    </div>
+                </div>
+            
+                <div class="telefonos">
+                    <div>
+                        <Label for="telefono">Teléfono</Label>
+                        <input id="telefono" type="tel" placeholder="Teléfono" pattern="\d{10}" maxlength="10" title="10 digitos numericos"/>
+                    </div>
+                    <div>
+                        <Label for="celular">Celular</Label>
+                        <input id="celular" type="tel" placeholder="Celular" pattern="\d{10}" maxlength="10" title="10 digitos numericos"/>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="elementos">
+
+                <div>
+                    <Label for="cuenta">No. de Cuenta</Label>
+                    <input id="cuenta" type="tel" placeholder="No. de Cuenta" maxlength="9" pattern="\d{9}" required />
+                </div>
+                <div>
+                    <h3>Historial académico actual</h3>
+                    <p>Lo puedes obtener del <a href="https://www.dgae-siae.unam.mx/www_gate.php">SIAE</a></p>
+                    <p>Subir archivo formato PDF. Este campo es obligatorio a menos de que seas de primer ingreso.</p>
+                </div>
+            
+                <div>
+                    <Label for="carrera">Carrera</Label>
+                    <select required>
+                        <option value="ingenieria">Ingeniería Aeroespacial</option>
+                        <option value="ingenieria">Ingeniería Ambiental</option>
+                        <option value="ingenieria">Ingeniería Civil</option>
+                        <option value="ingenieria">Ingeniería de Minas y Metalurgia</option>
+                        <option value="ingenieria">Ingeniería Eléctrica Electrónica</option>
+                        <option value="ingenieria">Ingeniería en Computación</option>
+                        <option value="ingenieria">Ingeniería en Sistemas Biomédicos</option>
+                        <option value="ingenieria">Ingeniería en Telecomunicaciones</option>
+                        <option value="ingenieria">Ingeniería Geofísica</option>
+                        <option value="ingenieria">Ingeniería Geológica</option>
+                        <option value="ingenieria">Ingeniería Geomática</option>
+                        <option value="ingenieria">Ingeniería Industrial</option>
+                        <option value="ingenieria">Ingeniería Mecánica</option>
+                        <option value="ingenieria">Ingeniería Mecatrónica</option>
+                        <option value="ingenieria">Ingeniería Petrolera</option>
+                    </select>
+                </div>
+            
+                <div>
+                    <label for="semestre">Semestre Actual</label>
+                    <select id="semestre" required>
+                        <option value="">Selecciona tu semestre</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        
+                    </select>
+                </div>
+            
+                <div>
+                    <Label for="promedio">Promedio</Label>
+                    <input id="promedio" type="number" placeholder="Promedio" min="7" max="10" step="0.1" required/>
+                </div>
+            </div>
+            <div class="elementos">
+                
+                <div class="archivos">
+                    <div>
+                        <Label for="historial" class="custom-file-label">Subir Historial Académico</Label>
+                        <input id="historial" type="file" accept=".pdf" required/>
+                    </div>
+                    <div>
+                        <label for="foto" class="custom-file-label">Subir foto</label>
+                        <input id="foto" type="file" accept="image/*" required />
+                    </div>
+                </div>
+                <div class="privacidad">
+                    <input type="checkbox" id="privacy" required/>
+                    <Label for="privacy">
+                        He leído y acepto el <a href="https://www.ingenieria.unam.mx/paginas/aviso_privacidad.php">Aviso de Privacidad Simplificado de la Facultad de Ingeniería, UNAM</a>
+                    </Label>
+                </div>
+                <button type="submit" class="custom-file-label">Registrarse</button>
+            </div>
+            
+        </form>
+    </div>
+
+
+    <!--Escudos /script/components/footer-->
+    <footer-component></footer-component>
+    
+    <script src="../script/components/header.js"></script>
+    <script src="../script/components/navbar.js"></script>
+    <script src="../script/components/footer.js"></script>
+    <script src="../script/registrobotones.js"></script>
+    <script src="../script/registro.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿id,title,description,duration,lugar,rutapdf,rutaimg
+1,Fundamentos de R  |  10 Hrs,15 al 19 de junio de 2026  17:00 a 19:00 hrs,1 Semana     ,Quiosco E  Sala 6,02 Fundamentos de R _rev.pdf,R.jpg
+2,Lógica de Programación en JavaScript  |  10 Hrs,15 al 19 de junio de 2026  10:00 a 12:00 hrs,1 Semana      ,Quiosco I  Sala 2,04 Lógica de Programación en JavaScript_rev.pdf,JS.jpg
+3,Introducción a las Bases de Datos   |  10 Hrs,15 al 19 de junio de 2026  12:00 a 14:00 hrs,1 Semana      ,Quiosco M  Sala 7,12 Introducción a Bases de Datos_rev.pdf,25.jpg
+4,Fundamentos de programación con Python  |  10 Hrs,15 al 19 de junio de 2026  15:00 a 17:00 hrs,1 Semana      ,Quiosco M Sala 8,13 Fundamentos de Programacion con Python_rev.pdf,14.jpg
+5,Excel basico  |  10 Hrs,15 al 19 de junio de 2026  10:00 a 12:00 hrs,1 Semanas    ,Quiosco M  Sala 6,14 Excel básico_rev.pdf,19.jpg
+6,Programación en VHDL  |  10 Hrs,15 al 19 de junio de 2026  15:00 a 17:00 hrs,1 Semana      ,Quiosco M  Sala 6,15 Programacion en VHDL_rev.pdf,15.jpg
+7,Autocad básico  |  10 Hrs,15 al 19 de junio de 2026  12:00 a 14:00 hrs,1 Semana      ,Quiosco M  Sala 8,10 Autocad básico_rev.pdf,Autocad.jpg
+8,Proteus  |  10 Hrs,15 al 19 de junio de 2026  10:00 a 12:00 hrs,1 Semana     ,Quiosco T  Sala 9,21 Proteus (versión Free Trial)_rev.pdf,proteus.jpg
+9,Fundamentoa de Producción musical con Ableton Live  |  10 Hrs,15 al 19 de junio de 2026  12:00 a 14:00 hrs,1 Semana      ,Quiosco T  Sala 9,25 Fundamentos de Produccion musical con Ableton Live_rev.pdf,Ableton Live.jpg
+10,De la Protoboard al Codigo: Electronica con Tinkercard  |  10 Hrs,15 al 19 de junio de 2026  10:00 a 12:00 hrs,1 Semana      ,Quiosco M  Sala 8,34 De la Protoboard al Codigo Electrónica con Tinkercad_rev.pdf,Tinkercad.jpg
+11,Construcción de Fuentes de Alimentación Simétrica y Regulada  |  10 Hrs,15 al 19 de junio de 2026  10:00 a 12:00 hrs,1 Semana     ,Quiosco M  Sala 7,28 Construccion de Fuentes de Alimentacion Simétrica y Regulada_rev.pdf,fuentes.jpg
+12,Introducción al Laravel |  10 Hrs,15 al 19 de junio de 2026  10:00 a 12:00 hrs,1 Semana      ,Quiosco E Sala 1,31 Introduccion al Laravel_rev.pdf,Laravel.jpg
+13,Excel avanzado  |  20 Hrs,15 al 26 de junio de 2026  12:00 a 14:00 hrs,2 Semanas      ,Quiosco M  Sala 6,18 Excel Avanzado_rev.pdf,19.jpg
+14,Fundamentos de Unity para Videojuegos |  10 Hrs,29 de junio al 3 de julio de 2026  12:00 a 14:00 hrs,1 Semana  ,Quiosco I Sala 1,29 Fundamentos de Unity para videojuegos_rev.pdf,unity.jpg
+15,Fundamentos de Ciberseguridad  |  10 Hrs,22 al 26 de junio de 2026  10:00 a 12:00 hrs,1 Semana      ,Quiosco E  Sala 1,01 Fundamentos de Ciberseguridad_rev.pdf,7.jpg
+16,Introducción al diseño con Fusion CNC  |  10 Hrs,22 al 26  de junio de 2026  12:00 a 14:00 hrs,1 Semana      ,Quiosco I  Sala 2,06 Introducción al diseño con Fusión CNC_rev.pdf,fusion_CNC.jpg
+17,Manejo de app de Google   |  10 Hrs,22 al 26  de junio de 2026  10:00 a 12:00 hrs,1 Semana     ,Quiosco M  Sala 7,08 Manejo de Apps de Google_rev.pdf,Google.jpg
+18,Desarrollo de páginas web  con HTML y CSS  |  10 Hrs,22 al 26 de junio de 2026  15:00 a 17:00 hrs,1 Semana      ,Quiosco M  Sala 6,16 Desarrollo de páginas web con HTML y CSS_rev.pdf,html_css.jpg
+19,Power Automate |  20 Hrs,22 al 26 de junio de 2026  17:00 a 19:00 hrs,1 Semana      ,Quiosco M  Sala 6,17 Power Automate_rev.pdf,PA.jpg
+20,Redes de datos |  10 Hrs,22 al 26 de junio de 2026  10:00 a 12:00 hrs,1 Semana    ,Quiosco M  Sala 8,19 Redes de Datos_rev.pdf,9.jpg
+21,Introducción a los Sistemas de  Inventarios con Excel   |  10 Hrs,22 al 26 de junio de 2026  10:00 a 12:00 hrs,1 Semana      ,Quiosco M  Sala 6,20 Introducción a los Sistemas de Inventarios con Excel_rev.pdf,19.jpg
+22,Excel Intermedio  |  10 Hrs,22 al 26 de junio de 2026  17:00 a 19:00 hrs,1 Semana      ,Quiosco I  Sala 2,22 Excel Intermedio_rev.pdf,19.jpg
+23,Análisis Estadístico Computacional con R  |  10 Hrs,22 al 26 de junio de 2026  17:00 a 19:00 hrs,1 Semana    ,Quiosco T  Sala 9,23 Análisis Estadístico Computacional con R_rev.pdf,R.jpg
+24,Autocad avanzado   |  20 Hrs,26 de junio al 3 de julio de 2026  15:00 a 17:00 hrs,2 Semanas      ,Quiosco T  Sala 9,26 Autocad avanzado_rev.pdf,Autocad.jpg
+25,Curso interno: Inglés (gramatical)  |  10 Hrs,29 de junio al 03 de julio de 2026  17:00 a 19:00 hrs,1 Semana      ,Quiosco M  Sala 7,03 Inglés Gramatical_rev.pdf,Ingles.jpg
+26,Latex básico  |  10 Hrs,29 de junio al 03 de julio de 2026  12:00 a 14:00 hrs,1 Semana      ,Quiosco M  Sala 6,05 Latex básico_rev.pdf,22.jpg
+27,Desarrolla tu creatividad con  CANVA   |  10 Hrs,29 de junio al 03 de julio de 2026  10:00 a 12:00 hrs,1 Semana     ,Quiosco M  Sala 8,07 Desarrolla tu creatividad con CANVA_rev.pdf,16.jpg
+28,Introducción a análisis de datos con Tableau  |  10 Hrs,29 de junio al 3 de julioe 2026  17:00 a 19:00 hrs,1 Semana     ,Quiosco M  Sala 8,09 Introducción al análisis de datos con Tableau_rev.pdf,tableau.jpg
+29,Introducción a SQL con Northwind   |  20 Hrs,29 de junio al 3 de julio de 2026  17:00 a 19:00 hrs,2 Semanas    ,Quiosco M  Sala 6,11 Introducción a SQL con Northwind_rev.pdf,sql_northwind.jpg
+30,Introducción al Diseño Mecánico en Autodesk Inventor  |  10 Hrs,29 de junio al 3 de julio de 2026  10:00 a 12:00 hrs,1 Semana      ,Quiosco T  Sala 9,24 Introducción al Diseño Mecánico en Autodesk Inventor_rev.pdf,5.jpg
+31,"Diseño e implementación de antenas dipolo, monopolo y Yagi-Uda   |  10 Hrs",29 de junio al 3 de julio de 2026  12:00 a 14:00 hrs,1 Semana      ,Quiosco M  Sala 8,"27 Diseño e implementación de antenas dipolo, monopolo y Yagi-Uda_rev.pdf",antena.jpg
+32,POO con Java   |  10 Hrs,29 de junio al 3 de julio de 2026  12:00 a 14:00 hrs,1 Semana      ,Quiosco I  Sala 2,30 POO con Java_rev.pdf,6.jpg
+33,Introducción al JavaScript   |  10 Hrs,29 de junio al 3 de julio de 2026  17:00 a 19:00 hrs,1 Semana      ,Quiosco I  Sala 2,32 Introduccion a JavaScript_rev.pdf,JS.jpg
+34,Introducción al Desarrollo Android con Android Studio   |  10 Hrs,29 de junio al 3 de julio de 2026  10:00 a 12:00 hrs,1 Semana      ,Quiosco M  Sala 6,33 Introducción al Desarrollo Android con Android Studio_rev.pdf,android.jpg
+35,Python Avanzado   |  10 Hrs,29 de junio al 3 de julio de 2026  10:00 a 12:00 hrs,1 Semana      ,Quiosco I  Sala 2,35 Python Avanzado_rev.pdf,14.jpg
+36,Introducción al desarrollo Web con python y Django   |  10 Hrs,29 de junio al 3 de julio de 2026  15:00 a 17:00 hrs,1 Semana      ,Quiosco M  Sala 6,36 Introducción al Desarrollo Web con Python y Django_rev.pdf,django.jpg

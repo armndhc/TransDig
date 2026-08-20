@@ -1,0 +1,135 @@
+:root {
+    --unam-blue: #064B7C;
+    --unam-gold: #46b064;
+    --light-gray: #ffffff;
+    --dark-gray: #000000;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.course-section {
+    padding: 40px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 2rem;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.course-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure all cards have the same height */
+}
+
+.card-header {
+    padding: 20px;
+    background-color: #f8f8f8;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 200px; /* Fixed height for all card headers */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align text to bottom */
+}
+
+.card-title {
+    font-size: 1.2rem;
+    color: #333;
+    text-shadow: 
+        -1.5px -1.5px 0 white,  
+        1.5px -1.5px 0 white,
+        -1.5px 1.5px 0 white,
+        1.5px 1.5px 0 white;
+    margin-bottom: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+.card-duration {
+    font-size: 1 rem;
+    color: #333;
+    text-shadow: 
+        -0.5px -0.5px 0 white,  
+        0.5px -0.5px 0 white,
+        -0.5px 0.5px 0 white,
+        0.5px 0.5px 0 white;
+    position: relative;
+    z-index: 1;
+}
+
+.card-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.card-description .card-lugar{
+    color: #555;
+    font-size: 1rem;
+}
+
+.card-footer {
+    padding: 20px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--unam-gold);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--unam-blue);
+}
+
+@media (max-width: 768px) {
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Separator styles remain unchanged */
+.separador.gradiente {
+    background: linear-gradient(90deg, var(--unam-blue) 0%, var(--unam-gold) 100%);
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin: 30px 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.separador.gradiente h2 {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+

@@ -1,0 +1,201 @@
+body {
+    background-size: cover;
+    background-position: center;
+    background-image:  url(../images/background/Fondo.jpg);
+    background-size: auto 100%;
+    background-position: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/background/Fondo.jpg);
+    margin-top: 8vw;
+}
+
+.registro {
+    display: flex;
+    flex-direction: column;
+    /* color: #ffffff; */
+    align-items: center;
+    max-width: 100%;
+    margin: 3vw 0;
+    width: 70%;
+    padding: 2vw 0;
+    text-align: center;
+    border-radius: 36px;
+    /* background: rgba(197, 221, 228, 0.4); */
+    opacity: 0;
+    transform: translateY(200px);
+    animation: fadeInUp 4s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 0.9;
+        transform: translateY(0);
+    }
+}
+
+.elementos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    padding-bottom: 3vw;
+    margin: 1vw;
+    border-radius: 36px;
+    background: rgba(197, 221, 228, 0.4);
+    opacity: 0;
+    transform: translateY(200px);
+    animation: fadeInUp 4s forwards;
+}
+
+.elementos div {
+    padding-top: 1vw;
+}
+
+.nombres, .telefonos, .archivos, .masdatos {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+input:not([type="file"]) {
+    font-size: small;
+    border-width: 1px;
+    /* border-radius: 5px; */
+    border-color: #193c6b;
+}
+
+select {
+    border-radius: 6px;
+    background: #193c6b;
+    color: #ffffff;
+    box-shadow: inset -22px -22px 15px #15325a,
+                inset 22px 22px 15px #1d467c;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.elementos div h3{
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+.elementos div p{
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+.privacidad {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.registro label {
+    font-size:medium;
+    font-weight: 500;
+}
+
+.registro input {
+    border-radius: 5px;
+}
+
+Button {
+    margin-top: 20px;
+    border-radius: 6px;
+    background: #193c6b;
+    color: #ffffff;
+    box-shadow: inset -22px -22px 15px #15325a,
+    inset 22px 22px 15px #1d467c;
+}
+
+form div {
+    padding: .5vw;
+}
+
+input[type="file"] {
+    font-size: 0.8vw;
+    cursor: pointer;
+    display: none;
+}
+
+/* Estilizar el label como un botón */
+.custom-file-label {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background: #193c6b;
+    color: #ffffff;
+    box-shadow: inset -22px -22px 15px #15325a, 
+                inset 22px 22px 15px #1d467c;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.file-selected {
+    background: #1d467c; /* Cambia el color de fondo */
+}
+
+.custom-file-label:hover {
+    background: #1d467c;
+}
+
+/* Para ocultar las flechas en la mayoría de los navegadores */
+input[type="number"] {
+    -moz-appearance: textfield; /* Para Firefox */
+}
+
+/* Ocultar flechas en WebKit (Chrome, Safari) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+@media screen and (max-width: 820px){
+    .content {
+        margin-top: 30vw;
+    }
+    .nombres{
+        flex-direction: column;
+    }
+    .telefonos{
+        flex-direction: column;
+    }
+    form {
+        width: 95%;
+    }
+    .elementos div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    input[type="file"] {
+        font-size: 3vw;
+        cursor: pointer;
+    }
+}

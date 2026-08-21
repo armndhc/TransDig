@@ -1,5 +1,3 @@
-
-
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +8,7 @@
 
 
 
-/* Navigation */
+/* Navegación: transparente al inicio, degradado rojo FI al hacer scroll */
 .nav-container {
     position: fixed;
     top: 0;
@@ -20,13 +18,13 @@
     background-color: transparent;
     border-top: none;
     box-shadow: none;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background 0.7s ease, box-shadow 0.7s ease, border-top-color 0.7s ease;
 }
 
 .nav-container.scrolled {
-    background-color: white;
-    border-top: 1px solid #eee;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    background: linear-gradient(135deg, var(--fi-rojo) 0%, #5c0000 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
 }
 
 .main-nav {
@@ -62,14 +60,15 @@
     position: relative;
 }
 
+/* Letras del nav: blanco puro + sombra más marcada para que no se pierdan en el rojo */
 .nav-list a {
     display: block;
     padding: 22px 22px;
     text-decoration: none;
-    color: var(--light-gray);
-    font-weight: 500;
+    color: #ffffff;
+    font-weight: 600;
     font-size: 1.05rem;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
@@ -78,24 +77,32 @@
 }
 
 .nav-list a.active {
-    color: white;
+    color: var(--unam-gold);
     border-bottom: 3px solid var(--unam-gold);
 }
 
-/* Cuando el navbar tiene fondo sólido (scrolled), el texto vuelve a ser oscuro */
+/* Como el navbar ahora siempre es rojo, estas letras se quedan igual en ambos estados */
 .nav-container.scrolled .nav-list a {
-    color: var(--dark-gray);
-    text-shadow: none;
+    color: #ffffff;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 .nav-container.scrolled .nav-list a.active {
-    color: var(--fi-rojo);
+    color: var(--unam-gold);
 }
 
-/* Los links dentro de los dropdowns siempre son oscuros, ya que su fondo siempre es blanco */
-.dropdown-content a {
+/* El dropdown debe verse igual en el estado scrolled que en el hero:
+   texto oscuro por defecto y mismo efecto al pasar el cursor */
+.nav-container.scrolled .dropdown-content a {
     color: var(--dark-gray);
     text-shadow: none;
+    background-color: white;
+}
+
+.nav-container.scrolled .dropdown-content a:hover {
+    background-color: #ffffff;
+    color: var(--fi-rojo);
+    box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.12);
 }
 
 .mobile-menu-btn {
@@ -123,9 +130,26 @@
     overflow: hidden;
 }
 
+.dropdown-content:hover {
+    background-color: #ffffff;
+    color: var(--fi-rojo);
+    box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* Submenús: fondo blanco con sombra al pasar el mouse (sin azul) */
 .dropdown-content a {
     padding: 12px 20px;
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid #eee;
+    color: var(--dark-gray);
+    text-shadow: none;
+    background-color: white;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #ffffff;
+    color: var(--fi-rojo);
+    box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.12);
 }
 
 .dropdown-content a:last-child {
@@ -165,50 +189,50 @@
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
-/* M�VILES PEQUE�OS (=480px) */
-    @media (max-width: 480px) {
-      .main-nav {
-        padding: 0 15px;
-      }
+/* MÓVILES PEQUEÑOS (≤480px) */
+@media (max-width: 480px) {
+  .main-nav {
+    padding: 0 15px;
+  }
 
-      .logo span {
-        display: none;
-      }
+  .logo span {
+    display: none;
+  }
 
-      .logo img {
-        height: 35px;
-      }
+  .logo img {
+    height: 35px;
+  }
 
-      .nav-logos img {
-        height: 40px;
-      }
+  .nav-logos img {
+    height: 40px;
+  }
 
-      .nav-logos {
-        gap: 8px;
-      }
+  .nav-logos {
+    gap: 8px;
+  }
 
-      .nav-list a {
-        padding: 16px 20px;
-        font-size: 1.05rem;
-      }
+  .nav-list a {
+    padding: 16px 20px;
+    font-size: 1.05rem;
+  }
 
-      .hero {
-        height: 55vh;
-        min-height: 320px;
-      }
+  .hero {
+    height: 55vh;
+    min-height: 320px;
+  }
 
-      .hero-content h1 {
-        font-size: 1.6rem;
-      }
-    }
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+}
 
-    /* TABLETS (769px - 992px) */
-    @media (min-width: 769px) and (max-width: 992px) {
-      .nav-list {
-        gap: 2px;
-      }
-      .nav-list a {
-        padding: 10px 14px;
-        font-size: 0.9rem;
-      }
-    }
+/* TABLETS (769px - 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .nav-list {
+    gap: 2px;
+  }
+  .nav-list a {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+}

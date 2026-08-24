@@ -5,26 +5,57 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* El navbar es "position: fixed", así que sale del flujo normal y tapa
+   el contenido. En el home eso se resuelve con el margin-top del .hero;
+   en el resto de las páginas empujamos el body hacia abajo lo que mide
+   el navbar. */
+body:not(.home) {
+    padding-top: 90px;
+}
 
 
 
-/* Navegación: transparente al inicio, degradado rojo FI al hacer scroll */
+
+/* Navegación: sólida por defecto en todas las páginas.
+   Solo en el home (body.home), mientras estás arriba del hero, se ve transparente.
+   Truco: el degradado vive en un ::before con opacity animable, porque los
+   navegadores NO pueden hacer transición suave entre "transparent" y un
+   linear-gradient directamente en "background" (se ve "de golpe"). */
 .nav-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: transparent;
-    border-top: none;
+    background: transparent; /* el color real lo pone el ::before */
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.5s ease;
+}
+
+.nav-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(135deg, var(--fi-rojo) 0%, #5c0000 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    opacity: 1; /* sólido por defecto en todas las páginas */
+    transition: opacity 0.5s ease, border-top-color 0.5s ease;
+}
+
+/* Solo en el home, sin la clase "scrolled" (arriba del hero), se desvanece
+   gradualmente hacia transparente */
+body.home .nav-container:not(.scrolled) {
     box-shadow: none;
-    transition: background 0.7s ease, box-shadow 0.7s ease, border-top-color 0.7s ease;
 }
 
 .nav-container.scrolled {
-    background: linear-gradient(135deg, var(--fi-rojo) 0%, #5c0000 100%);
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+body.home .nav-container:not(.scrolled)::before {
+    opacity: 0;
+    border-top-color: transparent;
 }
 
 .main-nav {
@@ -191,6 +222,10 @@
 
 /* MÓVILES PEQUEÑOS (≤480px) */
 @media (max-width: 480px) {
+  body:not(.home) {
+    padding-top: 70px;
+  }
+
   .main-nav {
     padding: 0 15px;
   }

@@ -5,29 +5,20 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* El navbar es "position: fixed", así que sale del flujo normal y tapa
-   el contenido. En el home eso se resuelve con el margin-top del .hero;
-   en el resto de las páginas empujamos el body hacia abajo lo que mide
-   el navbar. */
 body:not(.home) {
     padding-top: 90px;
 }
 
-
-
-
 /* Navegación: sólida por defecto en todas las páginas.
    Solo en el home (body.home), mientras estás arriba del hero, se ve transparente.
-   Truco: el degradado vive en un ::before con opacity animable, porque los
-   navegadores NO pueden hacer transición suave entre "transparent" y un
-   linear-gradient directamente en "background" (se ve "de golpe"). */
+   El color real siempre lo pone el ::before, así la transición es gradual. */
 .nav-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: transparent; /* el color real lo pone el ::before */
+    background: transparent;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
     transition: box-shadow 0.5s ease;
 }
@@ -37,7 +28,7 @@ body:not(.home) {
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: linear-gradient(135deg, var(--fi-rojo) 0%, #5c0000 100%);
+    background: linear-gradient(135deg, var(--fi-rojo, #cd171e) 0%, #5c0000 100%);
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     opacity: 1; /* sólido por defecto en todas las páginas */
     transition: opacity 0.5s ease, border-top-color 0.5s ease;
@@ -66,7 +57,6 @@ body.home .nav-container:not(.scrolled)::before {
     justify-content: space-between;
 }
 
-/* Logos a la izquierda del navbar */
 .nav-logos {
     display: flex;
     align-items: center;
@@ -91,7 +81,6 @@ body.home .nav-container:not(.scrolled)::before {
     position: relative;
 }
 
-/* Letras del nav: blanco puro + sombra más marcada para que no se pierdan en el rojo */
 .nav-list a {
     display: block;
     padding: 22px 22px;
@@ -100,87 +89,65 @@ body.home .nav-container:not(.scrolled)::before {
     font-weight: 600;
     font-size: 1.05rem;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+    border-radius: 6px;
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover de los ítems principales: rojo más oscuro, letras blancas */
 .nav-list a:hover {
-    color: var(--unam-gold);
+    color: #ffffff;
+    background-color: #5c0000;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
 .nav-list a.active {
-    color: var(--unam-gold);
-    border-bottom: 3px solid var(--unam-gold);
+    color: var(--fi-dorado, #eab15b);
+    border-bottom: 3px solid var(--fi-dorado, #eab15b);
 }
 
-/* Como el navbar ahora siempre es rojo, estas letras se quedan igual en ambos estados */
 .nav-container.scrolled .nav-list a {
     color: #ffffff;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
+.nav-container.scrolled .nav-list a:hover {
+    color: #ffffff;
+    background-color: #5c0000;
+}
+
 .nav-container.scrolled .nav-list a.active {
-    color: var(--unam-gold);
+    color: var(--fi-dorado, #eab15b);
 }
 
-/* El dropdown debe verse igual en el estado scrolled que en el hero:
-   texto oscuro por defecto y mismo efecto al pasar el cursor */
-.nav-container.scrolled .dropdown-content a {
-    color: var(--dark-gray);
-    text-shadow: none;
-    background-color: white;
-}
-
-.nav-container.scrolled .dropdown-content a:hover {
-    background-color: #ffffff;
-    color: var(--fi-rojo);
-    box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.12);
-}
-
-.mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: var(--unam-blue);
-    cursor: pointer;
-}
-
-/* Dropdown menus */
 .dropdown {
     position: relative;
 }
 
+/* Dropdown con la misma estética oscura del navbar sobre el hero */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: white;
-    min-width: 200px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, var(--fi-rojo, #cd171e) 0%, #5c0000 100%);
+    min-width: 220px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
     z-index: 100;
     border-radius: 4px;
     overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.dropdown-content:hover {
-    background-color: #ffffff;
-    color: var(--fi-rojo);
-    box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.12);
-}
-
-/* Submenús: fondo blanco con sombra al pasar el mouse (sin azul) */
 .dropdown-content a {
     padding: 12px 20px;
-    border-bottom: 1px solid #eee;
-    color: var(--dark-gray);
-    text-shadow: none;
-    background-color: white;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    background: transparent;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .dropdown-content a:hover {
-    background-color: #ffffff;
-    color: var(--fi-rojo);
-    box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.12);
+    background-color: #5c0000;
+    color: var(--fi-dorado, #eab15b);
 }
 
 .dropdown-content a:last-child {
@@ -189,6 +156,15 @@ body.home .nav-container:not(.scrolled)::before {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--fi-azul, #003d79);
+    cursor: pointer;
 }
 
 /* Hero: imagen de inicio detrás del navbar */
@@ -220,7 +196,6 @@ body.home .nav-container:not(.scrolled)::before {
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
-/* MÓVILES PEQUEÑOS (≤480px) */
 @media (max-width: 480px) {
   body:not(.home) {
     padding-top: 70px;
@@ -228,14 +203,6 @@ body.home .nav-container:not(.scrolled)::before {
 
   .main-nav {
     padding: 0 15px;
-  }
-
-  .logo span {
-    display: none;
-  }
-
-  .logo img {
-    height: 35px;
   }
 
   .nav-logos img {
@@ -261,7 +228,6 @@ body.home .nav-container:not(.scrolled)::before {
   }
 }
 
-/* TABLETS (769px - 992px) */
 @media (min-width: 769px) and (max-width: 992px) {
   .nav-list {
     gap: 2px;

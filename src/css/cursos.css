@@ -1,4 +1,9 @@
-/* Variables de color: ver :root en style.css (fuente unica) */
+:root {
+    --unam-blue: #064B7C;
+    --unam-gold: #46b064;
+    --light-gray: #ffffff;
+    --dark-gray: #000000;
+}
 
 .content {
     display: flex;
@@ -127,4 +132,49 @@
     margin: 0;
 }
 
+/* Dropdown de Histórico de Reportes */
+/* Dropdown de Histórico de Reportes */
+.course-dropdown {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto 30px auto;
 
+    padding: 14px 40px 14px 18px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--dark-gray);
+
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23064B7C'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 18px;
+
+    border: 2px solid var(--unam-blue);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(6, 75, 124, 0.15);
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    cursor: pointer;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.course-dropdown:hover {
+    border-color: var(--unam-gold);
+}
+
+.course-dropdown:focus {
+    outline: none;
+    border-color: var(--unam-gold);
+    box-shadow: 0 0 0 3px rgba(70, 176, 100, 0.25);
+}
+
+.course-dropdown option {
+    color: var(--dark-gray);
+    background-color: #ffffff;
+    padding: 10px;
+}

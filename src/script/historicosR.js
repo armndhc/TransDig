@@ -65,12 +65,17 @@ async function loadCourses() {
     return courses; // Retornamos los cursos procesados
 }
 
+function renderPreview(course) {
+    const preview = document.getElementById('coursePreview');
 
-function createCourseCard(course) {
-    return `
+    if (!course) {
+        preview.innerHTML = '';
+        return;
+    }
+
+    preview.innerHTML = `
         <div class="course-card">
-            <div class="card-header" style="background-image: url('${course.rutaimg}');">
-            </div>
+            <div class="card-header" style="background-image: url('${course.rutaimg}');"></div>
             <div class="card-content">
                 <p class="card-description">${course.description}</p>
             </div>
@@ -82,9 +87,27 @@ function createCourseCard(course) {
 }
 
 async function renderCourses() {
-    const courses = await loadCourses(); // Esperamos los cursos cargados
+    const courses = await loadCourses();
     const courseList = document.getElementById('courseList');
-    courseList.innerHTML = courses.map(createCourseCard).join(''); // Renderizamos las tarjetas
+
+    const options = courses
+        .map(course => `<option value="${course.id}">${course.description}</option>`)
+        .join('');
+
+    courseList.innerHTML = `
+        <select id="courseSelect" class="course-dropdown">
+            <option value="" disabled selected>Selecciona un reporte...</option>
+            ${options}
+        </select>
+    `;
+
+    const select = document.getElementById('courseSelect');
+    select.addEventListener('change', (e) => {
+        const selectedCourse = courses.find(c => c.id === parseInt(e.target.value, 10));
+        if (selectedCourse) {
+            window.open(selectedCourse.rutapdf, '_blank');
+        }
+    });
 }
 
 document.addEventListener('DOMContentLoaded', renderCourses);

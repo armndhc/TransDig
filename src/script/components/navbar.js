@@ -16,9 +16,9 @@ class NavbarComponent extends HTMLElement {
         <nav class="nav-container" id="main-navbar">
             <div class="main-nav">
                 <div class="nav-logos">
-                    <img src="${imgBase}/FIBlanco.png" alt="Logo UNAM">
-                    <img src="${imgBase}/Logo TD_Blanco_CMYK.png" alt="Logo Facultad de Ingeniería">
-                    <img src="${imgBase}/DIE Blanco.png" alt="Logo DIE">
+                    <img src="${imgBase}/FIBlanco.png" alt="Logo Facultad de Ingeniería" class="logo-fi">
+                    <img src="${imgBase}/DIE blanco.png" alt="Logo DIE" class="logo-die">
+                    <img src="${imgBase}/Logo TD_Blanco_CMYK.png" alt="Logo Transformación Digital">
                 </div>
                 <ul class="nav-list" id="main-menu">
                     <li><a href="${homeLink}" class="">Inicio</a></li>

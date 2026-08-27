@@ -14,67 +14,7 @@
 <body class="home">
 
     <!-- Navigation -->
-    <nav class="nav-container" id="main-navbar">
-        <div class="main-nav">
-            <div class="nav-logos">
-                <img src="src/images/Encabezado/FIBlanco.png" alt="Logo UNAM">
-                <img src="src/images/Encabezado/Logo TD_Blanco_CMYK.png" alt="Logo Facultad de Ingeniería">
-                <img src="src/images/Encabezado/DIE blanco.png" alt="Logo DIE">
-            </div>
-            <ul class="nav-list" id="main-menu">
-                <li><a href="index.html" class="">Inicio</a></li>
-                <li class="dropdown">
-                    <a href="#">Acerca de</a>
-                    <div class="dropdown-content">
-                        <a href="src/pages/organizacion-organigrama.html">Organigrama</a>
-                        <!--<a href="src/pages/organizacion-mision.html">Misión</a>
-                        <a href="objetivos.html">Objetivos</a> -->
-                    </div>
-                </li>
-        				<li class="dropdown">
-                  <a href="#">Quioscos PC Puma </a>
-                  <div class="dropdown-content">
-        						<a href="src/pages/quioscos.html">Quioscos</a>
-        						<a href="src/pages/personal.html">¿Quienes somos?</a>
-                    <a href="src/pages/servicios.html">Servicios</a>
-        						<a href="src/pages/reglamentotd.html">Reglamento TD</a>
-        						<a href="src/pages/registroPCPUMA.html">Registro PC Puma</a>
-        						<a href="src/pages/reservacion.html">Reservación de Salas</a>
-                </li>
-                <li class="dropdown">
-                    <a href="src/pages/red-pc-puma.html">Red PC Puma</a>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Programa de becarios</a>
-                    <div class="dropdown-content">
-                        <a href="src/pages/becarios-convocatoria.html">Convocatoria</a>
-                        <a href="https://www.ingenieria.unam.mx/transformaciondigital/IT-Pro/registro/index.php/cargaSolicitudRegistro">Registro</a>
-                        <a href="src/pages/becarios-generaciones.html">Generaciones</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="src/pages/cursos-temario.html">Cursos</a>
-                    <div class="dropdown-content">
-                        <a href="src/pages/cursos-convocatoria.html"class="dropdown-link">Convocatoria</a>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdvfc-D4T5L0GSAmAHAEK3r28_zH1a3IsBziNIyNgvx1yVkTQ/viewform" target="_blank">Registro</a>
-                        <a href="src/pages/cursos-costos.html" class="dropdown-link">Costos</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Plataformas Educativas</a>
-                    <div class="dropdown-content">
-                        <a href="src/pages/plataformas-educafi.html" class="dropdown-link">EDUCAFI</a>
-                        <a href="src/pages/plataformas-google-suite.html" class="dropdown-link">Google Suite</a>
-                        <a href="src/pages/plataformas-office-365.html" class="dropdown-link">Office 365</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="src/pages/estadisticas-pc-puma.html">Estad&iacute;sticas PC Puma</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
+    <navbar-component root="true"></navbar-component>
     <!-- Hero: imagen de inicio -->
     <div class="hero">
         <div class="hero-content">
@@ -312,7 +252,7 @@
 
 <script src="src/script/slider.js"></script>
 <script src="src/script/noticias.js"></script>
-<script src="src/script/navbar.js"></script>
+<script src="src/script/components//navbar.js"></script>
 <script src="src/script/carousel.js"></script>
 <script src="src/script/pc-puma.js"></script>
 <script src="src/script/noticias.js"></script>

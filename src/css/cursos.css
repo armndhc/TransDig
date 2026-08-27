@@ -1,10 +1,3 @@
-:root {
-    --unam-blue: #064B7C;
-    --unam-gold: #46b064;
-    --light-gray: #ffffff;
-    --dark-gray: #000000;
-}
-
 .content {
     display: flex;
     justify-content: center;
@@ -96,7 +89,7 @@
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: var(--unam-gold);
+    background-color: var(--fi-dorado);
     color: #fff;
     text-align: center;
     text-decoration: none;
@@ -107,7 +100,7 @@
 }
 
 .btn:hover {
-    background-color: var(--unam-blue);
+    background-color: var(--fi-rojo);
 }
 
 @media (max-width: 768px) {
@@ -118,7 +111,7 @@
 
 /* Separator styles remain unchanged */
 .separador.gradiente {
-    background: linear-gradient(90deg, var(--unam-blue) 0%, var(--unam-gold) 100%);
+    background: linear-gradient(90deg, var(--fi-rojo) 0%, var(--fi-dorado) 100%);
     padding: 10px 20px;
     border-radius: 4px;
     margin: 30px 0 20px;
@@ -133,7 +126,6 @@
 }
 
 /* Dropdown de Histórico de Reportes */
-/* Dropdown de Histórico de Reportes */
 .course-dropdown {
     display: block;
     width: 100%;
@@ -146,14 +138,14 @@
     color: var(--dark-gray);
 
     background-color: #ffffff;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23064B7C'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23003d79'><path d='M7 10l5 5 5-5z'/></svg>");
     background-repeat: no-repeat;
     background-position: right 14px center;
     background-size: 18px;
 
-    border: 2px solid var(--unam-blue);
+    border: 2px solid var(--fi-azul);
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(6, 75, 124, 0.15);
+    box-shadow: 0 2px 6px rgba(0, 61, 121, 0.15);
 
     appearance: none;
     -webkit-appearance: none;
@@ -164,13 +156,13 @@
 }
 
 .course-dropdown:hover {
-    border-color: var(--unam-gold);
+    border-color: var(--fi-dorado);
 }
 
 .course-dropdown:focus {
     outline: none;
-    border-color: var(--unam-gold);
-    box-shadow: 0 0 0 3px rgba(70, 176, 100, 0.25);
+    border-color: var(--fi-dorado);
+    box-shadow: 0 0 0 3px rgba(234, 177, 91, 0.25);
 }
 
 .course-dropdown option {

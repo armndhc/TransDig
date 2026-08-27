@@ -9,9 +9,7 @@ body:not(.home) {
     padding-top: 90px;
 }
 
-/* Navegación: sólida por defecto en todas las páginas.
-   Solo en el home (body.home), mientras estás arriba del hero, se ve transparente.
-   El color real siempre lo pone el ::before, así la transición es gradual. */
+/* Navegación: siempre sólida, en todas las páginas (incluido el home). */
 .nav-container {
     position: fixed;
     top: 0;
@@ -30,23 +28,11 @@ body:not(.home) {
     z-index: -1;
     background: linear-gradient(135deg, var(--fi-rojo, #cd171e) 0%, #5c0000 100%);
     border-top: 1px solid rgba(255, 255, 255, 0.15);
-    opacity: 1; /* sólido por defecto en todas las páginas */
-    transition: opacity 0.5s ease, border-top-color 0.5s ease;
-}
-
-/* Solo en el home, sin la clase "scrolled" (arriba del hero), se desvanece
-   gradualmente hacia transparente */
-body.home .nav-container:not(.scrolled) {
-    box-shadow: none;
+    opacity: 1; /* sólido siempre */
 }
 
 .nav-container.scrolled {
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
-}
-
-body.home .nav-container:not(.scrolled)::before {
-    opacity: 0;
-    border-top-color: transparent;
 }
 
 .main-nav {
@@ -60,7 +46,7 @@ body.home .nav-container:not(.scrolled)::before {
 .nav-logos {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 28px;
 }
 
 .nav-logos img {
@@ -68,6 +54,14 @@ body.home .nav-container:not(.scrolled)::before {
     width: auto;
     display: block;
     transition: height 0.3s ease;
+}
+
+.nav-logos img.logo-fi {
+    height: 90px;
+}
+
+.nav-logos img.logo-die {
+    height: 45px;
 }
 
 .nav-list {
@@ -207,6 +201,14 @@ body.home .nav-container:not(.scrolled)::before {
 
   .nav-logos img {
     height: 40px;
+  }
+
+  .nav-logos img.logo-fi {
+    height: 60px;
+  }
+
+  .nav-logos img.logo-die {
+    height: 30px;
   }
 
   .nav-logos {

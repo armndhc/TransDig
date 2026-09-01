@@ -152,13 +152,41 @@ body:not(.home) {
     display: block;
 }
 
+/* Botón hamburguesa: oculto en escritorio */
 .mobile-menu-btn {
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
     background: none;
     border: none;
-    font-size: 24px;
-    color: var(--fi-azul, #003d79);
     cursor: pointer;
+    z-index: 1001;
+}
+
+.mobile-menu-btn .bar {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Icono se transforma en "X" cuando el menú está abierto */
+.mobile-menu-btn.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.mobile-menu-btn.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Hero: imagen de inicio detrás del navbar */
@@ -190,6 +218,68 @@ body:not(.home) {
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
+/* ============================
+   RESPONSIVE: tablets y móviles
+   ============================ */
+@media (max-width: 992px) {
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    .nav-list {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: min(320px, 80vw);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        background: linear-gradient(180deg, var(--fi-rojo, #cd171e) 0%, #5c0000 100%);
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.35);
+        padding: 90px 0 20px;
+        overflow-y: auto;
+        transform: translateX(100%);
+        transition: transform 0.35s ease;
+    }
+
+    .nav-list.open {
+        transform: translateX(0);
+    }
+
+    .nav-list a {
+        padding: 16px 24px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    /* En móvil los submenús se abren como acordeón dentro del panel, no flotando */
+    .dropdown-content {
+        display: none;
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none; /* anula el hover de escritorio */
+    }
+
+    .dropdown.open .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-toggle::after {
+        content: "▾";
+        float: right;
+        transition: transform 0.3s ease;
+    }
+
+    .dropdown.open .dropdown-toggle::after {
+        transform: rotate(180deg);
+    }
+}
+
 @media (max-width: 480px) {
   body:not(.home) {
     padding-top: 70px;
@@ -215,6 +305,10 @@ body:not(.home) {
     gap: 8px;
   }
 
+  .nav-list {
+    width: 100vw;
+  }
+
   .nav-list a {
     padding: 16px 20px;
     font-size: 1.05rem;
@@ -231,11 +325,7 @@ body:not(.home) {
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
-  .nav-list {
-    gap: 2px;
-  }
   .nav-list a {
-    padding: 10px 14px;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 }

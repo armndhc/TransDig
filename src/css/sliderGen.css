@@ -1,37 +1,55 @@
+/* sliderGen.css
+   NOTA: este archivo declara las mismas clases (.slider, .slider .list,
+   .slider .dots, etc.) que slider.css. Si alguna página llega a cargar
+   ambos archivos a la vez, sus reglas van a pisarse entre sí y el
+   resultado visual será impredecible. Verifica que nunca se importen
+   juntos en el mismo HTML; si necesitas usarlos en la misma página,
+   lo correcto es renombrar este bloque a una clase distinta, por
+   ejemplo .slider-gen, y actualizar el HTML que lo usa. */
 
 .slider {
-    width: 100; 
+    width: 100%;
     max-width: 40%;
-    height: auto;
     margin: 0 auto 40px auto;
     position: relative;
+    overflow: hidden;
     border-radius: 8px;
     display: block;
+    /* Eliminamos aspect-ratio. La altura la controla JS ahora. */
+    transition: height 0.4s ease; 
 }
 
 .slider .list {
-    width: 100%; 
-    height: 100%;
-    position: center; 
-    left: 0;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    /* Agregamos la animación para que se vea cómo desliza */
+    transition: left 1s ease;
+    /* Esto evita el error del "zoom", obligando a la lista a ser 
+       tan ancha como la suma de todas las imágenes */
+    width: calc(var(--items, 1) * 100%);
 }
 
 .slider .item {
-    width: 100%;
-    height: auto;
-}
-
-.slider .item img {
-    width: 100%;
+    /* Cada imagen ocupa su espacio exacto dentro del slider */
+    width: calc(100% / var(--items, 1));
+    flex-shrink: 0;
     height: 100%;
 }
 
+.slider .item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block;
+}
+
 .slide-text {
-  position: relative; 
-  bottom: 60px;       
-  background-color: rgba(0, 0, 0, 0.5); 
-  color: white;
-  padding: 10px; 
+    position: relative;
+    bottom: 60px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
 }
 
 /* Botones */
@@ -42,6 +60,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
+    pointer-events: none;
 }
 
 .slider .buttons button {
@@ -54,10 +73,11 @@
     font-family: monospace;
     font-weight: bold;
     cursor: pointer;
+    pointer-events: auto;
 }
 
 .slider .buttons button:hover {
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 /* Dots */
@@ -88,11 +108,20 @@
 }
 
 /* Responsive */
-@media (max-width: 640px) {
+@media (max-width: 900px) {
     .slider {
-        width: 600px;
-        height: 250px;
+        max-width: 70%;
     }
 }
-    
 
+@media (max-width: 640px) {
+    .slider {
+        max-width: 100%;
+        border-radius: 4px;
+    }
+
+    .slider .buttons button {
+        width: 40px;
+        height: 40px;
+    }
+}

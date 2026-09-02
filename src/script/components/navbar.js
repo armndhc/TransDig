@@ -58,8 +58,9 @@ class NavbarComponent extends HTMLElement {
                         </div>
                     </li>
                     <li class="dropdown">
-                        <a href="${pageBase}/cursos-temario.html">Cursos</a>
+                        <a href="#" class="dropdown-toggle">Cursos</a>
                         <div class="dropdown-content">
+                            <a href="${pageBase}/cursos-temario.html" class="dropdown-link">Temario</a>
                             <a href="${pageBase}/cursos-convocatoria.html" class="dropdown-link">Convocatoria</a>
                             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdvfc-D4T5L0GSAmAHAEK3r28_zH1a3IsBziNIyNgvx1yVkTQ/viewform" target="_blank">Registro</a>
                             <a href="${pageBase}/cursos-costos.html" class="dropdown-link">Costos</a>

@@ -35,6 +35,12 @@
     overflow: hidden;
 }
 
+.img-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 .proyecto h3{
     padding: 30px;
     text-align: center;
@@ -74,6 +80,21 @@
 }
 
 /*********************** ETAPAS ***********************/
+/* Contenedor propio de Etapas (independiente del .carousel-container
+   de noticias/avisos definido en style.css, para evitar choques de clases) */
+.etapas-container {
+    max-width: 1200px;
+    margin: 15px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.etapas-carousel {
+    display: flex;
+    flex-wrap: wrap;       /* permite que las tarjetas se apilen en pantallas chicas */
+    justify-content: center;
+}
+
 .carouselE-item {
     flex: 0 0 33.33%;
     padding: 8px;
@@ -371,11 +392,6 @@
 .intro-section, .description-section, .gallery-section {
     margin-bottom: 60px;
 }
-
-
-
-
-
 
 .gallery-grid-D {
     display: grid;
@@ -759,61 +775,172 @@
   border-radius: 2px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .galeria-grupo {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .quiosco-card {
-    max-width: 100%;
-  }
+/* ===================== RESPONSIVE GENERAL ===================== */
+
+/* ===================== TABLET (<= 992px) ===================== */
+@media (max-width: 992px) {
+    .carouselE-item {
+        flex: 0 0 50%; /* 2 tarjetas por fila en vez de 3 */
+    }
+
+    .objetivo-section {
+        gap: 20px;
+        padding: 24px;
+    }
+
+    .cards,
+    .gallery-grid-D {
+        gap: 20px;
+    }
 }
 
-/* Responsive: Ajustes para pantallas más pequeñas */
+/* ===================== MÓVIL (<= 768px) ===================== */
 @media (max-width: 768px) {
-  paso-registro, .paso-registro:nth-child(odd) {
-  flex-direction: column; 
+
+    /* Espacios/quioscos existente */
+    .galeria-grupo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quiosco-card {
+        max-width: 100%;
+    }
+
+    /* Objetivo: de fila a columna */
+    .objetivo-section {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px;
+        gap: 15px;
+        text-align: center;
+    }
+    .objetivo-text h3 {
+        font-size: 20px;
+    }
+
+    /* Etapas: una tarjeta por fila */
+    .carouselE-item {
+        flex: 0 0 100%;
+    }
+    .etapas-card img {
+        height: 180px;
+    }
+
+    /* Tablas: scroll horizontal en vez de romperse */
+    .tabla-sanciones,
+    .tabla-espacios {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Registro PC Puma */
+    .header-registro h2 {
+        font-size: 1.8em;
+    }
+    .header-registro .subtitulo-registro {
+        font-size: 1em;
+    }
+    .pcpuma-registro-completo {
+        padding: 15px;
+        margin: 20px auto;
+    }
+    .numero-paso {
+        width: 48px;
+        height: 48px;
+        font-size: 1.6em;
+    }
+
+    /* Registro: pasos en columna (además del wrap ya existente) */
+    .paso-registro,
+    .paso-registro:nth-child(odd) {
+        flex-direction: column;
+    }
+    .contenido-paso {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .numero-paso {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .imagen-paso {
+        border-left: none;
+        border-right: none;
+        padding-top: 0;
+    }
+
+    /* Detalles: menos indentación */
+    .detalle-header {
+        margin-left: 20px;
+    }
+    .detalle-item ul {
+        margin-left: 20px;
+    }
+    .detalles-section h2 {
+        font-size: 1.5em;
+    }
+
+    /* Botones */
+    .btn {
+        width: 80%;
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* Tarjetas de servicios: 1 columna */
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    .gallery-grid-D {
+        grid-template-columns: 1fr;
+    }
+    .gallery-grid-D img {
+        height: 220px;
+    }
+
+    /* Galería con Swiper */
+    .gallery-carousel {
+        height: 300px;
+    }
+
+    /* Contenido general */
+    .quioscos-content {
+        width: 94%;
+    }
+    .proyecto h3 {
+        padding: 15px;
+        font-size: 1em;
+    }
 }
 
-            .contenido-paso {
-                flex-direction: column; 
-                align-items: center; 
-                text-align: center;
-            }
-
-            .numero-paso {
-                margin-right: 0;
-                margin-bottom: 15px;
-            }
-
-            .imagen-paso {
-                border-left: none;
-                border-right: none;
-                padding-top: 0;
-            }
-
-            .header-registro h2 {
-                font-size: 2em;
-            }
-
-            .header-registro .subtitulo-registro {
-                font-size: 1em;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .gallery-carousel {
-                height: 300px;
-            }
-            .gallery-carousel .swiper-button-next,
-            .gallery-carousel .swiper-button-prev {
-                width: 40px;
-                height: 40px;
-            }
-            .gallery-carousel .swiper-button-next:after,
-            .gallery-carousel .swiper-button-prev:after {
-                font-size: 18px;
-            }
-        }
+/* ===================== MÓVIL PEQUEÑO (<= 480px) ===================== */
+@media (max-width: 480px) {
+    .header-registro h2 {
+        font-size: 1.5em;
+    }
+    .numero-paso {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3em;
+    }
+    .etapas-card-content h3,
+    .detalle-header h3 {
+        font-size: 1em;
+    }
+    .btn {
+        width: 100%;
+        padding: 12px 16px;
+        font-size: 15px;
+    }
+    .quiosco-card h3 {
+        font-size: 1.05rem;
+    }
+}

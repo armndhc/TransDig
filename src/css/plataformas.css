@@ -19,7 +19,7 @@
 
 .platforms_h3{
     font-size: 27px;
-    margin-bottom: -10px;
+    margin-bottom: 10px;
     margin-top: 40px;
 }
 
@@ -37,6 +37,7 @@ a{
 
 .platforms_p{
     font-size: 17px;
+    text-align: justify;
 }
 
 .platforms_li{
@@ -95,18 +96,18 @@ a{
 }
 
 .button-label {
-    display: block; /* Asegura que la etiqueta esté en una nueva línea */
-    font-weight: 700; /* Fuente más negrita */
-    margin-top: 10px; /* Separación de la imagen */
-    font-size: 16px; /* Tamaño de fuente legible */
+    display: block; /* Asegura que la etiqueta estï¿½ en una nueva lï¿½nea */
+    font-weight: 700; /* Fuente mï¿½s negrita */
+    margin-top: 10px; /* Separaciï¿½n de la imagen */
+    font-size: 16px; /* Tamaï¿½o de fuente legible */
     color: #333; /* Color del texto, ajustable */
 }
 
 
-/* Media query para pantallas pequeñas */
+/* Media query para pantallas pequeï¿½as */
 @media (max-width: 800px) {
     .educafi-button img {
-        width: 120px; /* Reduce el tamaño de las imágenes en pantallas pequeñas */
+        width: 120px; /* Reduce el tamaï¿½o de las imï¿½genes en pantallas pequeï¿½as */
     }
     .button-container {
         gap: 15px; /* Reduce el espacio entre botones */

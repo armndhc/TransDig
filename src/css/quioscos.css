@@ -1,5 +1,26 @@
 /* CONTENT */
+/* IMAGEN ENCABEZADO - responsive */
+.img-encabezado {
+    width: 60%;
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    margin: 50px auto 0; /* desktop */
+}
 
+@media (max-width: 768px) {
+    .img-encabezado {
+        width: 85%;
+        margin-top: 25px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .img-encabezado {
+        width: 95%;
+        margin-top: 25px; 
+    }
+}
 .quioscos-content {
     font-family: Arial, sans-serif;
     font-size: 16px;

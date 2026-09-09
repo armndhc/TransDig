@@ -7,6 +7,17 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentIndex = 0;
     let interval;
 
+    // Refuerza los atributos anti-fullscreen por si el HTML los pierde
+    items.forEach(item => {
+        const video = item.querySelector('video');
+        if (video) {
+            video.setAttribute('playsinline', '');
+            video.setAttribute('webkit-playsinline', '');
+            video.setAttribute('disablepictureinpicture', '');
+            video.muted = true; // requerido para autoplay en iOS
+        }
+    });
+
     // Ajusta el alto del contenedor a la proporción REAL del video que
     // se está mostrando (cada video puede tener dimensiones distintas).
     function updateContainerRatio(item) {
@@ -16,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (video.videoWidth && video.videoHeight) {
             container.style.setProperty('--video-ratio', `${video.videoWidth} / ${video.videoHeight}`);
         } else {
-            // Las dimensiones aún no se conocen: se ajusta en cuanto carguen
             video.addEventListener('loadedmetadata', () => {
                 container.style.setProperty('--video-ratio', `${video.videoWidth} / ${video.videoHeight}`);
             }, { once: true });
@@ -29,10 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         items.forEach((item, i) => {
             const video = item.querySelector('video');
-            if (!video) return; // Evita errores si no hay video
+            if (!video) return;
 
             if (i === index) {
-                // El catch evita errores en navegadores que bloquean el autoplay
                 video.play().catch(() => {});
                 video.loop = true;
                 updateContainerRatio(item);
@@ -56,10 +65,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function startAutoPlay() {
         clearInterval(interval);
-        interval = setInterval(nextItem, 30000); // 30 segundos
+        interval = setInterval(nextItem, 30000);
     }
 
-    // Si el usuario gira el teléfono o cambia el tamaño de la ventana, se ajusta automáticamente
     window.addEventListener('resize', () => {
         showItem(currentIndex);
     });

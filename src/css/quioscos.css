@@ -64,7 +64,7 @@
 
 .proyecto h3{
     padding: 30px;
-    text-align: center;
+    text-align: justify; /* Justificado */
     margin: 0 0 8px;
     font-size: 1.1em;
     color: #333;
@@ -75,8 +75,6 @@
     max-width: 1200px;
     margin: 20px auto;
     padding: 0 20px;
-}
-.objetivo-section {
     display: flex;
     align-items: center;
     gap: 30px;
@@ -88,6 +86,7 @@
 .objetivo-text {
     flex: 2;
     color: #333;
+    text-align: justify; /* Justifica el bloque de texto en Objetivo */
 }
 .objetivo-text h3 {
     color: #333;
@@ -101,8 +100,7 @@
 }
 
 /*********************** ETAPAS ***********************/
-/* Contenedor propio de Etapas (independiente del .carousel-container
-   de noticias/avisos definido en style.css, para evitar choques de clases) */
+/* Contenedor propio de Etapas */
 .etapas-container {
     max-width: 1200px;
     margin: 15px auto;
@@ -141,11 +139,16 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    text-align: justify; /* Justifica las descripciones de las etapas */
+}
+.etapas-card-content ul {
+    padding-left: 20px;
 }
 .etapas-card h3 {
     margin: 0 0 8px;
     font-size: 1.1em;
     color: var(--unam-blue);
+    text-align: left; /* Mantiene los títulos a la izquierda */
 }
 
 /*------------------------- QUIENES SOMOS ----------------------------*/
@@ -191,69 +194,70 @@
 
 /********************* GALERIA - CARRUSEL*******************/
 .gallery-section {
-            padding: 40px 20px;
-        }
+    padding: 40px 20px;
+}
 .gallery-carousel {
-            position: relative;
-            width: 100%;
-            height: 700px;                    
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-            margin: 0 auto;
-            max-width: 1200px;
-        }
+    position: relative;
+    width: 100%;
+    height: 700px;                    
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+    max-width: 1200px;
+}
 .gallery-carousel .swiper-slide {
-            height: 100%;
-        }
-.gallery-carousel .swiper-slide img {width: 100%;
-            height: 100%;
-            object-fit: cover;            
-            display: block;
+    height: 100%;
+}
+.gallery-carousel .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;            
+    display: block;
 }
 
 /* Botones de navegación (flechas) */
 .gallery-carousel .swiper-button-next,
 .gallery-carousel .swiper-button-prev {
-            width: 50px;
-            height: 50px;
-            background-color: rgba(255, 255, 255, 0.7);
-            border-radius: 50%;
-            color: var(--unam-blue);
-            font-weight: bold;
-            backdrop-filter: blur(4px);
-            transition: all 0.3s ease;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    color: var(--unam-blue);
+    font-weight: bold;
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
 }
 
 .gallery-carousel .swiper-button-next:after,
 .gallery-carousel .swiper-button-prev:after {
-            font-size: 24px;
+    font-size: 24px;
 }
 
 .gallery-carousel .swiper-button-next:hover,
 .gallery-carousel .swiper-button-prev:hover {
-            background-color: white;
-            color: var(--unam-gold);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    background-color: white;
+    color: var(--unam-gold);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 /* Puntos (pagination bullets) */
 .gallery-carousel .swiper-pagination {
-            bottom: 20px;
+    bottom: 20px;
 }
 
 .gallery-carousel .swiper-pagination-bullet {
-             width: 14px;
-            height: 14px;
-            background: rgba(255, 255, 255, 0.6);
-            opacity: 1;
-            transition: all 0.3s;
+    width: 14px;
+    height: 14px;
+    background: rgba(255, 255, 255, 0.6);
+    opacity: 1;
+    transition: all 0.3s;
 }
 
 .gallery-carousel .swiper-pagination-bullet-active {
-            background: var(--unam-gold);
-            transform: scale(1.3);
-            box-shadow: 0 0 8px rgba(255, 183, 27, 0.8);
+    background: var(--unam-gold);
+    transform: scale(1.3);
+    box-shadow: 0 0 8px rgba(255, 183, 27, 0.8);
 }
 
 
@@ -271,24 +275,24 @@
 }
 
 /************************ SERVICIOS ****************************/
-        .servicios-content ul {
-            list-style-type: disc;
-            margin-left: 50px;
-            margin-bottom: 15px;
-			
-        }
-		.servicios-content ol {
-            list-style-type: number;
-            margin-left: 50px;
-        }
-        .servicios-content li {
-		    margin-left: 50px;
-        }
-		.servicios-content table {
-		spacing: 50px;
-		}
+.servicios-content ul {
+    list-style-type: disc;
+    margin-left: 50px;
+    margin-bottom: 15px;
+}
+.servicios-content ol {
+    list-style-type: number;
+    margin-left: 50px;
+}
+.servicios-content li {
+    margin-left: 50px;
+    text-align: justify; /* Justifica las listas de servicios */
+}
+.servicios-content table {
+    spacing: 50px;
+}
 
-  /* IMAGEN SECUNDARIA */
+/* IMAGEN SECUNDARIA */
 .image-secondary {
     width: 100%;
     max-width: 800px;
@@ -401,13 +405,13 @@
     list-style: disc outside; 
     font-size: 1em;
     color: #444;
+    text-align: justify; /* Justifica las viñetas internas en detalles */
 }
 
 .detalle-item ul li {
     margin-bottom: 8px;
     line-height: 1.6;
 }
-
 
 /* Secciones */
 .intro-section, .description-section, .gallery-section {
@@ -428,7 +432,6 @@
     transition: var(--transition);
     padding: auto;
 }
-
 
 /* Tarjetas de servicios */
 .servicios-grid h2::after {
@@ -465,7 +468,7 @@
 }
 
 .card ul {
-    text-align: left;
+    text-align: justify; /* Justifica listas dentro de tarjetas de servicios */
     margin-top: 12px;
     font-size: 0.95rem;
     color: #000000;
@@ -477,323 +480,325 @@
     padding-left: 20px;
 }
 
-
 /*******************REGISTRO PC PUMA***********************/
 
 /* Contenedor principal de la sección de registro */
-        .pcpuma-registro-completo {
-            max-width: 1000px;
-            margin: 40px auto; 
-            padding: 20px;
-            background-color: white; /* FONDO BLANCO SOLICITADO */
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05); 
-            border-radius: 10px;
-        }
+.pcpuma-registro-completo {
+    max-width: 1000px;
+    margin: 40px auto; 
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05); 
+    border-radius: 10px;
+}
 
-        /* Estilo del encabezado de la sección */
-        .header-registro {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
-        }
+/* Estilo del encabezado de la sección */
+.header-registro {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
 
-        .header-registro h2 {
-            font-size: 2.5em; 
-            color: #002244; 
-            margin-bottom: 5px;
-        }
+.header-registro h2 {
+    font-size: 2.5em; 
+    color: #002244; 
+    margin-bottom: 5px;
+}
 
-        .header-registro .subtitulo-registro {
-            font-size: 1.2em;
-            color: #666;
-            margin-top: 0;
-        }
+.header-registro .subtitulo-registro {
+    font-size: 1.2em;
+    color: #666;
+    margin-top: 0;
+}
 
-        /* Estilo para la caja "¿QUÉ ES UN QUIOSCO PC PUMA?" */
-        .que-es-quiosco {
-            background-color: #f0f8ff; 
-            border-left: 5px solid #0056b3; 
-            padding: 15px 20px;
-            margin-top: 25px;
-            border-radius: 5px;
-            text-align: left;
-        }
+/* Estilo para la caja "¿QUÉ ES UN QUIOSCO PC PUMA?" */
+.que-es-quiosco {
+    background-color: #f0f8ff; 
+    border-left: 5px solid #0056b3; 
+    padding: 15px 20px;
+    margin-top: 25px;
+    border-radius: 5px;
+    text-align: justify; /* Justifica la descripción del bloque */
+}
 
-        .que-es-quiosco h3 {
-            color: #0056b3;
-            margin-top: 0;
-            font-size: 1.3em;
-        }
+.que-es-quiosco h3 {
+    color: #0056b3;
+    margin-top: 0;
+    font-size: 1.3em;
+    text-align: left;
+}
 
-        .que-es-quiosco p {
-            font-size: 1em;
-            line-height: 1.6;
-            color: #333;
-        }
+.que-es-quiosco p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #333;
+}
 
-        /* Contenedor de todos los pasos individuales */
-        .lista-pasos {
-            display: flex;
-            flex-direction: column;
-            gap: 30px; 
-        }
+/* Contenedor de todos los pasos individuales */
+.lista-pasos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+}
 
-        /* Estilo para cada recuadro de paso (contenedor principal de número, texto e imagen) */
-        .paso-registro {
-            display: flex;
-            flex-wrap: wrap;
-            background-color: white; 
-            border: 1px solid #e0e0e0; 
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-            overflow: hidden; 
-        }
+/* Estilo para cada recuadro de paso */
+.paso-registro {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    overflow: hidden; 
+}
 
-        .paso-registro:nth-child(odd) { /* Alterna el orden de imagen y texto en pasos impares */
-            flex-direction: row-reverse;
-        }
+.paso-registro:nth-child(odd) {
+    flex-direction: row-reverse;
+}
 
+/* Contenedor del número y texto */
+.contenido-paso {
+    display: flex;
+    flex: 2; 
+    padding: 20px;
+    align-items: flex-start;
+}
 
-        /* Contenedor del número y texto */
-        .contenido-paso {
-            display: flex;
-            flex: 2; 
-            padding: 20px;
-            align-items: flex-start;
-        }
+/* Estilo para el recuadro del número */
+.numero-paso {
+    flex-shrink: 0; 
+    width: 60px;
+    height: 60px;
+    background-color: #004c99; 
+    color: white;
+    font-size: 2.2em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
 
-        /* Estilo para el recuadro del número (Circular) */
-        .numero-paso {
-            flex-shrink: 0; 
-            width: 60px;
-            height: 60px;
-            background-color: #004c99; 
-            color: white;
-            font-size: 2.2em;
-            font-weight: bold;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%; /* Forma circular */
-            margin-right: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
+/* Estilo para el recuadro del texto */
+.texto-paso {
+    flex-grow: 1;
+    color: #333;
+    text-align: justify; /* Justifica las instrucciones de registro */
+}
 
-        /* Estilo para el recuadro del texto */
-        .texto-paso {
-            flex-grow: 1;
-            color: #333;
-        }
+.texto-paso h4 {
+    color: #004c99;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+    text-align: left;
+}
 
-        .texto-paso h4 {
-            color: #004c99;
-            margin-top: 0;
-            margin-bottom: 10px;
-            font-size: 1.4em;
-        }
+.texto-paso p {
+    line-height: 1.6;
+    font-size: 1em;
+}
 
-        .texto-paso p {
-            line-height: 1.6;
-            font-size: 1em;
-        }
+.texto-paso ul {
+    list-style: none;
+    padding-left: 0;
+}
 
-        .texto-paso ul {
-            list-style: none;
-            padding-left: 0;
-        }
+.texto-paso ul li {
+    margin-bottom: 5px;
+}
 
-        .texto-paso ul li {
-            margin-bottom: 5px;
-        }
+.texto-paso a {
+    color: #0056b3;
+    text-decoration: none;
+}
 
-        .texto-paso a {
-            color: #0056b3;
-            text-decoration: none;
-        }
+.texto-paso a:hover {
+    text-decoration: underline;
+}
 
-        .texto-paso a:hover {
-            text-decoration: underline;
-        }
+/* Estilo para el recuadro de la imagen */
+.imagen-paso {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: #f9f9f9; 
+    border-left: 1px solid #eee; 
+}
 
-        /* Estilo para el recuadro de la imagen */
-        .imagen-paso {
-            flex: 1; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 15px;
-            background-color: #f9f9f9; 
-            border-left: 1px solid #eee; 
-        }
+.paso-registro:nth-child(odd) .imagen-paso {
+    border-left: none;
+    border-right: 1px solid #eee;
+}
 
-        /* Ajuste del borde para los pasos alternos */
-        .paso-registro:nth-child(odd) .imagen-paso {
-            border-left: none;
-            border-right: 1px solid #eee;
-        }
+.imagen-paso img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 
-        .imagen-paso img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
+/* Estilo para la información de contacto al final */
+.contact-info {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #e8f5e9; 
+    border: 1px solid #4CAF50;
+    border-radius: 8px;
+    font-size: 1.1em;
+    color: #333;
+}
 
-        /* Estilo para la información de contacto al final */
-        .contact-info {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #e8f5e9; 
-            border: 1px solid #4CAF50;
-            border-radius: 8px;
-            font-size: 1.1em;
-            color: #333;
-        }
+.contact-info a {
+    color: #003366;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        .contact-info a {
-            color: #003366;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.contact-info a:hover {
+    color: #003366;
+    text-decoration: underline;
+}
 
-        .contact-info a:hover {
-            color: #003366;
-            text-decoration: underline;
-        }
-        
-        /*---------------------RESERVACION----------------------------*/
-        .reservacion-content {
-            font-family: Arial, sans-serif;
-            font-size: 16px;
-            line-height: 1.6;
-            color: #333;
-            width: 90%;
-            margin: 0 auto;
-            text-align: left;
-        }
-        .reservacion-content h3 {
-            font-size: 22px;
-            color: #003366; 
-        }
-        .reservacion-content p {
-            margin-bottom: 15px;
-        }
-        .reservacion-content ul {
-            list-style-type: disc;
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-        .reservacion-content a {
-            color: #00519C;
-            text-decoration: none;
-        }
-        .reservacion-content a:hover {
-            text-decoration: underline;
-        }
-        .tabla-espacios {
-            width: 100%;
-            margin: 20px auto;
-            border-collapse: collapse;
-            font-size: 14px; 
-        }
-        .tabla-espacios td {
-            padding: 10px;
-            border: 0px solid #ccc;
-            vertical-align: top;
-        }
+/*---------------------RESERVACION----------------------------*/
+.reservacion-content {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    width: 90%;
+    margin: 0 auto;
+    text-align: justify; /* Justifica la sección de reservación */
+}
+.reservacion-content h3 {
+    font-size: 22px;
+    color: #003366; 
+    text-align: left;
+}
+.reservacion-content p {
+    margin-bottom: 15px;
+}
+.reservacion-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+.reservacion-content a {
+    color: #00519C;
+    text-decoration: none;
+}
+.reservacion-content a:hover {
+    text-decoration: underline;
+}
+.tabla-espacios {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-size: 14px; 
+}
+.tabla-espacios td {
+    padding: 10px;
+    border: 0px solid #ccc;
+    vertical-align: top;
+    text-align: justify;
+}
 
-    .btn {
-        display: block;
-        width: 25%;
-        margin: 0 auto;
-        padding: 30px;
-        background-color: var(--fi-dorado);
-        color: #fff;
-        text-align: center;
-        text-decoration: none;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        font-size: 20px;
-    }
+.btn {
+    display: block;
+    width: 25%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--fi-dorado);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 20px;
+}
 
-    .btn:hover {
-        background-color: var(--fi-azul);
-    }
+.btn:hover {
+    background-color: var(--fi-azul);
+}
 
-    .button-container {
-        display: flex;
-        justify-content: center; 
-        flex-direction: row; 
-        gap: 35px; 
-        padding: 20px; 
-        box-sizing: border-box;
-    }
+.button-container {
+    display: flex;
+    justify-content: center; 
+    flex-direction: row; 
+    gap: 35px; 
+    padding: 20px; 
+    box-sizing: border-box;
+}
 .espacios-quioscos {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
 }
 
 .espacios-quioscos h2 {
-  text-align: center;
-  color: var(--fi-azul);
-  margin-bottom: 30px;
-  font-size: 1.8rem;
+    text-align: center;
+    color: var(--fi-azul);
+    margin-bottom: 30px;
+    font-size: 1.8rem;
 }
 
 .galeria-grupo {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
 .quiosco-card {
-  flex: 1 1 300px;
-  max-width: 380px;
-  background: #f9f9f9;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: transform 0.3s ease;
+    flex: 1 1 300px;
+    max-width: 380px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
 .quiosco-card:hover {
-  transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 .quiosco-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
 }
 
 .quiosco-card h3 {
-  margin: 12px 0 6px;
-  font-size: 1.2rem;
-  color: var(--fi-azul);
+    margin: 12px 0 6px;
+    font-size: 1.2rem;
+    color: var(--fi-azul);
 }
 
 .quiosco-card p {
-  margin: 0 0 12px;
-  color: #555;
-  font-weight: bold;
+    margin: 0 0 12px;
+    color: #555;
+    font-weight: bold;
 }
 
 .separadorEspacios {
-  border: none;
-  height: 3px;
-  background-color: var(--fi-azul);
-  margin: 40px 0;
-  border-radius: 2px;
+    border: none;
+    height: 3px;
+    background-color: var(--fi-azul);
+    margin: 40px 0;
+    border-radius: 2px;
 }
 
 /* ===================== RESPONSIVE GENERAL ===================== */
@@ -801,7 +806,7 @@
 /* ===================== TABLET (<= 992px) ===================== */
 @media (max-width: 992px) {
     .carouselE-item {
-        flex: 0 0 50%; /* 2 tarjetas por fila en vez de 3 */
+        flex: 0 0 50%;
     }
 
     .objetivo-section {
@@ -818,7 +823,6 @@
 /* ===================== MÓVIL (<= 768px) ===================== */
 @media (max-width: 768px) {
 
-    /* Espacios/quioscos existente */
     .galeria-grupo {
         flex-direction: column;
         align-items: center;
@@ -828,19 +832,18 @@
         max-width: 100%;
     }
 
-    /* Objetivo: de fila a columna */
     .objetivo-section {
         flex-direction: column;
         align-items: stretch;
         padding: 20px;
         gap: 15px;
-        text-align: center;
+        text-align: justify; /* Mantiene la justificación del texto en móviles */
     }
     .objetivo-text h3 {
         font-size: 20px;
+        text-align: center;
     }
 
-    /* Etapas: una tarjeta por fila */
     .carouselE-item {
         flex: 0 0 100%;
     }
@@ -848,7 +851,6 @@
         height: 180px;
     }
 
-    /* Tablas: scroll horizontal en vez de romperse */
     .tabla-sanciones,
     .tabla-espacios {
         display: block;
@@ -856,7 +858,6 @@
         white-space: nowrap;
     }
 
-    /* Registro PC Puma */
     .header-registro h2 {
         font-size: 1.8em;
     }
@@ -873,7 +874,6 @@
         font-size: 1.6em;
     }
 
-    /* Registro: pasos en columna (además del wrap ya existente) */
     .paso-registro,
     .paso-registro:nth-child(odd) {
         flex-direction: column;
@@ -881,6 +881,9 @@
     .contenido-paso {
         flex-direction: column;
         align-items: center;
+        text-align: justify;
+    }
+    .texto-paso h4 {
         text-align: center;
     }
     .numero-paso {
@@ -893,7 +896,6 @@
         padding-top: 0;
     }
 
-    /* Detalles: menos indentación */
     .detalle-header {
         margin-left: 20px;
     }
@@ -904,7 +906,6 @@
         font-size: 1.5em;
     }
 
-    /* Botones */
     .btn {
         width: 80%;
         padding: 15px 20px;
@@ -916,7 +917,6 @@
         gap: 15px;
     }
 
-    /* Tarjetas de servicios: 1 columna */
     .cards {
         grid-template-columns: 1fr;
     }
@@ -927,12 +927,10 @@
         height: 220px;
     }
 
-    /* Galería con Swiper */
     .gallery-carousel {
         height: 300px;
     }
 
-    /* Contenido general */
     .quioscos-content {
         width: 94%;
     }

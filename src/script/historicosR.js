@@ -102,10 +102,17 @@ async function renderCourses() {
     `;
 
     const select = document.getElementById('courseSelect');
+    
+    // AQUÍ ESTÁ EL CAMBIO PRINCIPAL
     select.addEventListener('change', (e) => {
         const selectedCourse = courses.find(c => c.id === parseInt(e.target.value, 10));
+        
         if (selectedCourse) {
-            window.open(selectedCourse.rutapdf, '_blank');
+            // Renderizamos la tarjeta en lugar de simular un clic
+            renderPreview(selectedCourse);
+        } else {
+            // Si por alguna razón no hay curso (ej. vuelve al default), limpiamos la vista
+            renderPreview(null);
         }
     });
 }
